@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Проверка форсунок на стенде: что показывает отчёт</title>
+<meta name="description" content="Производительность, разброс, факел и герметичность: как читать отчёт после проверки форсунок.">
+<meta name="robots" content="noindex, nofollow"><link rel="canonical" href="https://viton.kz/ru/blog/proverka-forsunok-na-stende/">
+<link rel="alternate" hreflang="ru-KZ" href="https://viton.kz/ru/blog/proverka-forsunok-na-stende/"><link rel="alternate" hreflang="kk-KZ" href="https://viton.kz/kk/blog/proverka-forsunok-na-stende/"><link rel="alternate" hreflang="x-default" href="https://viton.kz/ru/blog/proverka-forsunok-na-stende/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Проверка форсунок на стенде: что показывает отчёт">
+<meta property="og:description" content="Производительность, разброс, факел и герметичность: как читать отчёт после проверки форсунок.">
+<meta property="og:url" content="https://viton.kz/ru/blog/proverka-forsunok-na-stende/">
+<meta property="og:image" content="https://viton.kz/img/d49d8b98fcac37f1771033b5225b505d.jpg">
+<meta property="og:locale" content="ru_KZ">
+<meta name="theme-color" content="#0B1220">
+<link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
+<style>
+html{background:#070C16}body{margin:0;background:#FFFFFF;color:#0B1220;font-family:'Manrope',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+a{color:#0B6BD8;text-decoration:none}a:hover{color:#08509F}
+h1,h2,h3,h4,p{margin:0}
+img{display:block;max-width:100%}
+.w{width:100%;max-width:1312px;margin:0 auto;padding:0 56px}
+.mono{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 26px;border-radius:999px;font-weight:700;font-size:15px;white-space:nowrap;transition:background .2s,border-color .2s}
+.btn-p{background:#0B6BD8;color:#FFFFFF}.btn-p:hover{background:#0A5BB8;color:#FFFFFF}
+.btn-g{border:1px solid rgba(255,255,255,.22);color:#FFFFFF}.btn-g:hover{background:rgba(255,255,255,.07);color:#FFFFFF}
+.btn-l{border:1px solid #CFD6E1;color:#0B1220}.btn-l:hover{border-color:#0B1220;color:#0B1220}
+.nav a{color:#C9D2DF;font-size:14px;font-weight:600}.nav a:hover{color:#FFFFFF}
+.cover{width:100%;height:100%;object-fit:cover}
+.card{border:1px solid #E3E8EF;border-radius:24px;background:#FFFFFF;transition:border-color .2s}
+.card:hover{border-color:#0B6BD8}
+details{border-top:1px solid #E3E8EF}
+details:last-child{border-bottom:1px solid #E3E8EF}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:26px 0;font-size:19px;font-weight:700}
+summary::-webkit-details-marker{display:none}
+details[open] .pm{transform:rotate(45deg)}
+.pm{transition:transform .2s;flex:none}
+.g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.g4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.split{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:64px}
+.hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:56px;align-items:center}
+.h2{font-size:52px;line-height:1.04;letter-spacing:-.035em;font-weight:800}
+.lead{font-size:18px;line-height:1.6;color:#5B6577}
+.sec{padding:128px 0}
+.prow{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:center;padding:26px 0;border-top:1px solid #E3E8EF}
+.prow:first-child{border-top:0}
+.fl a{color:#C9D2DF}.fl a:hover{color:#FFFFFF}
+.prose{display:flex;flex-direction:column;gap:24px;font-size:18px;line-height:1.7;color:#2A3446}
+.prose h2{font-size:32px;line-height:1.2;letter-spacing:-.02em;font-weight:800;color:#0B1220;margin-top:32px}
+.prose ul,.prose ol{margin:0;padding-left:26px;display:flex;flex-direction:column;gap:10px}
+.prose li::marker{color:#0B6BD8;font-weight:700}
+.prose b{color:#0B1220}
+.prose table{width:100%;border-collapse:collapse;font-size:16px;line-height:1.5}
+.prose th{text-align:left;font-size:12px;font-family:'JetBrains Mono',ui-monospace,monospace;letter-spacing:.08em;text-transform:uppercase;color:#5B6577;font-weight:500;padding:14px 16px;background:#F3F5F8}
+.prose td{padding:16px;border-bottom:1px solid #E3E8EF;vertical-align:top}
+.toc a{color:#5B6577;font-size:15px;line-height:1.45}.toc a:hover{color:#0B6BD8}
+@media (max-width:1100px){.g4{grid-template-columns:repeat(2,minmax(0,1fr)) !important}.hero,.split,.artg{grid-template-columns:1fr !important;gap:40px !important}}
+@media (max-width:760px){.w{padding:0 20px}.g2,.g3,.g4{grid-template-columns:1fr !important}.h2{font-size:34px}.h1{font-size:40px !important}.sec{padding:80px 0}.nav{display:none !important}.hide-m{display:none !important}.btn{width:100%}.prose h2{font-size:26px}}
+.mbar{display:none}@media (max-width:760px){body{padding-bottom:84px}.mbar{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;position:fixed;left:12px;right:12px;bottom:12px;z-index:50;padding:8px;border-radius:22px;background:rgba(11,18,32,.92);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.1)}.mbar .btn{min-height:52px;padding:0 12px}.pk{grid-template-columns:1fr !important}}
+
+
+.mnav{display:none;position:relative}
+.mnav>summary{list-style:none;cursor:pointer;width:46px;height:46px;border-radius:14px;border:1px solid rgba(255,255,255,.18);display:flex;align-items:center;justify-content:center;color:#FFFFFF;padding:0}
+.mnav>summary::-webkit-details-marker{display:none}
+.mnav-panel{position:absolute;right:0;top:56px;z-index:60;width:min(320px,calc(100vw - 32px));background:#0B1220;border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:12px;display:flex;flex-direction:column;box-shadow:0 24px 60px rgba(0,0,0,.4)}
+.mnav-panel a{color:#FFFFFF;font-size:17px;font-weight:600;padding:14px 12px;border-radius:12px}
+.mnav-panel a:hover{background:rgba(255,255,255,.06);color:#FFFFFF}
+.lsw{display:inline-flex;border:1px solid rgba(255,255,255,.18);border-radius:999px;overflow:hidden;flex:none}
+.lsw a{padding:4px 11px;font-size:12px;font-weight:700;color:#8A96A8}
+.lsw a[aria-current]{background:rgba(255,255,255,.12);color:#FFFFFF}
+.pk-btn{min-height:58px;padding:14px 18px;border-radius:16px;text-align:left;font-family:inherit;font-size:15px;font-weight:600;line-height:1.35;cursor:pointer;transition:background .2s,border-color .2s;background:#F3F5F8;color:#0B1220;border:1px solid #E3E8EF}
+.pk-btn[aria-pressed="true"]{background:#0B1220;color:#FFFFFF;border-color:#0B1220}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid #0290FE;outline-offset:2px}
+img{height:auto}
+img.cover{height:100%}
+@media (max-width:760px){
+ .mnav{display:block}
+ header .btn-p,header .hd-lsw{display:none !important}
+ header.w{height:72px !important}
+ h1,.h1{font-size:40px !important;line-height:1.05 !important;overflow-wrap:anywhere}
+ .h2{font-size:32px !important}
+ table{font-size:14px}
+ .split,.hero,.hero-grid,.artg{grid-template-columns:1fr !important;gap:32px !important}
+ .prose table{display:block;overflow-x:auto}
+ .sec{padding:72px 0 !important}
+ .prow{grid-template-columns:1fr !important;gap:8px !important}
+ h1,h2,h3,h4,.h1,.h2{overflow-wrap:anywhere}
+ p,li,td,th,a,span,div{overflow-wrap:break-word}
+ a[href^="tel:"]{white-space:nowrap}
+ .w[style*="height: 40px"]>div:first-child{display:none !important}
+ .g4[style*="padding-top: 32px; padding-bottom: 40px; gap: 0"]{grid-template-columns:1fr 1fr !important;row-gap:24px !important}
+ .g4[style*="padding-top: 32px; padding-bottom: 40px; gap: 0"]>div{border-left:0 !important;padding:0 12px 0 0 !important}
+ .g4[style*="padding-top: 32px; padding-bottom: 40px; gap: 0"]>div>div:first-child{font-size:26px !important}
+ .btn{white-space:normal !important;height:auto !important;min-height:52px;padding-top:12px !important;padding-bottom:12px !important;text-align:center;line-height:1.3}
+ .g4[style*="border-bottom: 1px solid #E3E8EF"]{grid-template-columns:1fr 1fr !important}
+ .g4[style*="border-bottom: 1px solid #E3E8EF"]>div{border-left:0 !important;padding:28px 12px 28px 0 !important}
+ .g4[style*="border-bottom: 1px solid #E3E8EF"]>div>div:first-child{font-size:40px !important}
+}
+.split>*,.hero>*,.hero-grid>*,.artg>*,.g2>*,.g3>*,.g4>*{min-width:0}
+
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Проверка форсунок на стенде: что показывает отчёт", "description": "Производительность, разброс, факел и герметичность: как читать отчёт после проверки форсунок.", "inLanguage": "ru", "mainEntityOfPage": "https://viton.kz/ru/blog/proverka-forsunok-na-stende/", "image": "https://viton.kz/img/ba9f08456b2aea077f45ce1e5d156d34.jpg", "datePublished": "2026-10-20", "dateModified": "2026-10-20", "author": {"@type": "Person", "@id": "https://viton.kz/#viktor", "name": "Виктор Новиков", "jobTitle": "Основатель VITON.KZ", "worksFor": {"@id": "https://viton.kz/#anosova"}}, "publisher": {"@type": "Organization", "name": "VITON.KZ", "logo": {"@type": "ImageObject", "url": "https://viton.kz/img/acd804b0fe0796fc9f44f04e90299986.svg"}}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Можно ли присутствовать при проверке?", "acceptedAnswer": {"@type": "Answer", "text": "Да. Стенд на виду, мастер показывает замеры и факел."}}, {"@type": "Question", "name": "Проверяете форсунки непосредственного впрыска?", "acceptedAnswer": {"@type": "Answer", "text": "Да, стенд работает с давлением 50–150 бар и подходит для GDI и FSI."}}, {"@type": "Question", "name": "Что если одна форсунка хуже остальных?", "acceptedAnswer": {"@type": "Answer", "text": "Чистим её повторно. Если показатели не выровнялись, предлагаем заменить только её."}}, {"@type": "Question", "name": "Где в Алматы проверить форсунки и получить отчёт?", "acceptedAnswer": {"@type": "Answer", "text": "Отчёт с замерами до и после делают в автосервисе VITON.KZ на Аносова 91 в Алматы (ежедневно 09:30–19:00, +7 747 495 61 65). Стенд работает с давлением 50–150 бар и подходит для форсунок распределённого и непосредственного впрыска. Проверку можно смотреть вживую, видео факела отправляем вам."}}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://viton.kz/ru/"}, {"@type": "ListItem", "position": 2, "name": "Полезное", "item": "https://viton.kz/ru/blog/"}, {"@type": "ListItem", "position": 3, "name": "Проверка форсунок на стенде: что показывает отчёт", "item": "https://viton.kz/ru/blog/proverka-forsunok-na-stende/"}]}</script>
+</head>
+<body>
+
+<div style="background: #0B1220; color: #FFFFFF">
+<header class="w" style="display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 88px; border-bottom: 1px solid rgba(255,255,255,.08)">
+<a aria-label="VITON.kz — на главную" href="/ru/" style="display: inline-flex; align-items: center; flex: none"><img alt="VITON.kz" src="/img/a90cfa11df4171200f94c412e9fb1da1.svg" style="height: 44px; width: auto; display: block"/></a>
+<nav aria-label="Основное меню" class="nav" style="display: flex; gap: 36px">
+<a href="/ru/services/">Услуги</a>
+<a href="/ru/contacts/">Лаборатория</a>
+<a href="/ru/hyperfuel/">Hyperfuel</a>
+<a href="/ru/blog/" style="color: #FFFFFF">Полезное</a>
+<a href="/ru/contacts/">Контакты</a>
+</nav>
+<div style="display: flex; align-items: center; gap: 14px"><span class="lsw hd-lsw" data-i18n-skip=""><a aria-current="true" href="/ru/blog/proverka-forsunok-na-stende/" hreflang="ru" lang="ru">RU</a><a href="/kk/blog/proverka-forsunok-na-stende/" hreflang="kk" lang="kk">ҚАЗ</a></span><a class="btn btn-p" href="https://wa.me/77474956165" style="min-height: 46px; padding: 0 20px; font-size: 14px"><svg aria-hidden="true" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 21l2-5.5A8.4 8.4 0 1 1 21 11.5z"></path></svg>Записаться</a>
+<details class="mnav" data-i18n-skip=""><summary aria-label="Меню"><svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24" width="22"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></summary><div class="mnav-panel"><a href="/ru/services/">Услуги</a><a href="/ru/hyperfuel/">Hyperfuel</a><a href="/ru/blog/">Полезное</a><a href="/ru/contacts/">Контакты</a><a href="/ru/contacts/#lab">Лаборатория</a><a href="tel:+77474956165">Позвонить: +7 747 495 61 65</a><a href="https://wa.me/77474956165">Записаться в WhatsApp</a><div style="padding: 12px"><span class="lsw" data-i18n-skip=""><a aria-current="true" href="/ru/blog/proverka-forsunok-na-stende/" hreflang="ru" lang="ru">RU</a><a href="/kk/blog/proverka-forsunok-na-stende/" hreflang="kk" lang="kk">ҚАЗ</a></span></div></div></details></div>
+</header>
+<div class="w" style="padding-top: 28px; font-size: 13px; color: #8A96A8; display: flex; gap: 10px; flex-wrap: wrap">
+<a href="/ru/" style="color: #8A96A8">Главная</a><span>/</span><a href="/ru/blog/" style="color: #8A96A8">Полезное</a><span>/</span><span style="color: #C9D2DF">Проверка форсунок на стенде</span>
+</div>
+<div class="w" style="padding-top: 56px; padding-bottom: 72px">
+<div style="display: flex; flex-direction: column; gap: 24px; max-width: 920px">
+<div class="mono" style="display: inline-flex; align-items: center; gap: 12px; color: #6FB9FF"><span style="width: 28px; height: 1px; background: #0290FE"></span>Статья · Форсунки</div>
+<h1 class="h1" style="font-size: 56px; line-height: 1.04; letter-spacing: -.035em; font-weight: 800">Проверка форсунок на стенде: что показывает отчёт</h1>
+<p style="font-size: 19px; line-height: 1.6; color: #AEB8C7; max-width: 760px">После чистки со снятием вы получаете отчёт с цифрами, фото и видео. Рассказываем, что в нём значит каждая строка и когда форсунку уже не спасти.</p>
+<div style="display: flex; gap: 12px 24px; flex-wrap: wrap; align-items: center; font-size: 14px; color: #8A96A8"><a href="#author" style="display: inline-flex; align-items: center; gap: 12px; color: #C9D2DF"><span style="width: 40px; height: 40px; border-radius: 50%; background: #1A2740; border: 1px solid rgba(255,255,255,.16); color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px">ВН</span><span><span style="color: #FFFFFF; font-weight: 700">Виктор Новиков</span> · основатель VITON.KZ</span></a><span>Обновлено 20.10.2026</span><span>5 мин чтения</span></div>
+</div>
+</div>
+</div>
+<section style="padding: 64px 0 128px">
+<div class="w" style="display: flex; flex-direction: column; gap: 64px">
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 12px">
+<div style="height: 520px; border-radius: 28px; overflow: hidden; background: #121B2C"><img alt="Стенд проверки форсунок с мерными колбами" class="cover" src="/img/ba9f08456b2aea077f45ce1e5d156d34.jpg"/></div>
+</figure>
+<div class="artg" style="display: grid; grid-template-columns: minmax(0,760px) minmax(0,340px); gap: 96px; align-items: start">
+<article style="display: flex; flex-direction: column; gap: 40px">
+<div style="padding: 28px 32px; border-radius: 20px; background: #EEF6FF; border-left: 4px solid #0B6BD8; display: flex; flex-direction: column; gap: 12px">
+<span class="mono" style="color: #0B6BD8">Коротко</span>
+<p style="font-size: 19px; line-height: 1.6; font-weight: 600; color: #0B1220">Стенд показывает, сколько топлива льёт каждая форсунка за одно и то же время, какой у неё факел распыла и не подтекает ли она в закрытом состоянии. По разнице между форсунками и сравнению «до и после» понятно, помогла ли чистка или форсунку нужно менять.</p>
+</div>
+<div class="prose">
+<h2 id="s1">Что измеряет стенд?</h2>
+<ul><li><b>Производительность:</b> сколько топлива набирается в мерной колбе за цикл.</li><li><b>Равномерность:</b> разброс производительности между форсунками.</li><li><b>Факел распыла:</b> форма конуса и мелкость капель.</li><li><b>Герметичность:</b> не подтекает ли форсунка под давлением.</li><li><b>Работа на режимах:</b> холостой ход, средняя и полная нагрузка.</li></ul>
+<h2 id="s2">Как читать цифры в отчёте?</h2>
+<p>Важна не только абсолютная цифра, но и разброс. Двигатель лучше работает, когда все форсунки льют одинаково, даже если каждая немного отличается от новой.</p>
+<div style="border: 1px solid #E3E8EF; border-radius: 18px; overflow: hidden"><table><thead><tr><th>Форсунка</th><th>До чистки</th><th>После чистки</th></tr></thead><tbody><tr><td style="font-weight: 700; color: #0B1220">Цилиндр 1</td><td>92%</td><td>99%</td></tr><tr><td style="font-weight: 700; color: #0B1220">Цилиндр 2</td><td>88%</td><td>98%</td></tr><tr><td style="font-weight: 700; color: #0B1220">Цилиндр 3</td><td>64%</td><td>97%</td></tr><tr><td style="font-weight: 700; color: #0B1220">Цилиндр 4</td><td>90%</td><td>99%</td></tr></tbody></table></div>
+<p style="padding: 20px 24px; border-radius: 16px; background: #F3F5F8; font-size: 16px; line-height: 1.6; color: #5B6577">Цифры для примера. В реальном отчёте значения зависят от модели форсунок и режима стенда.</p>
+<h2 id="s3">Когда форсунку не спасти?</h2>
+<ul><li>Производительность не выровнялась после повторной чистки.</li><li>Факел остался струйным или несимметричным.</li><li>Форсунка подтекает в закрытом состоянии.</li><li>Неисправна обмотка: сопротивление вне нормы.</li></ul>
+<p>В этом случае меняют только неисправную форсунку. Остальные, если они в норме, ставят обратно.</p>
+<h2 id="s4">Что вы получаете на руки?</h2>
+<ul><li>Таблицу замеров до и после по каждой форсунке.</li><li>Видео факела распыла.</li><li>Список заменённых деталей ремкомплекта.</li><li>Рекомендации, если причина симптомов не только в форсунках.</li></ul>
+</div>
+<section id="where" style="padding: 36px 40px; border-radius: 24px; border: 1px solid #CFE3FB; background: linear-gradient(180deg,#F5FAFF,#FFFFFF); display: flex; flex-direction: column; gap: 14px">
+<span class="mono" style="color: #0B6BD8">Вывод · VITON.KZ в Алматы</span>
+<h2 style="font-size: 28px; line-height: 1.2; letter-spacing: -.02em; font-weight: 800">Где получить отчёт о проверке форсунок в Алматы?</h2>
+<p style="font-size: 17px; line-height: 1.65; color: #2A3446">Отчёт с замерами до и после делают в автосервисе VITON.KZ на Аносова 91 в Алматы (ежедневно 09:30–19:00, +7 747 495 61 65). Стенд работает с давлением 50–150 бар и подходит для форсунок распределённого и непосредственного впрыска. Проверку можно смотреть вживую, видео факела отправляем вам.</p>
+<div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 6px">
+<a class="btn btn-p" href="https://wa.me/77474956165"><svg aria-hidden="true" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 21l2-5.5A8.4 8.4 0 1 1 21 11.5z"></path></svg>Записаться в WhatsApp</a>
+<a class="btn btn-l" href="/ru/services/injector-cleaning/">Чистка форсунок: цены и сроки</a>
+</div>
+</section>
+<div style="display: flex; flex-direction: column; gap: 24px; margin-top: 32px">
+<span class="mono" style="color: #0B6BD8">Частые вопросы</span>
+<h2 style="font-size: 32px; line-height: 1.2; letter-spacing: -.02em; font-weight: 800">Коротко отвечаем.</h2>
+<div>
+<details open="">
+<summary>Можно ли присутствовать при проверке?<svg aria-hidden="true" class="pm" fill="none" height="22" stroke="#0B1220" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24" width="22"><path d="M12 5v14M5 12h14"></path></svg></summary>
+<p style="padding-bottom: 26px; font-size: 16px; line-height: 1.65; color: #5B6577">Да. Стенд на виду, мастер показывает замеры и факел.</p>
+</details>
+<details>
+<summary>Проверяете форсунки непосредственного впрыска?<svg aria-hidden="true" class="pm" fill="none" height="22" stroke="#0B1220" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24" width="22"><path d="M12 5v14M5 12h14"></path></svg></summary>
+<p style="padding-bottom: 26px; font-size: 16px; line-height: 1.65; color: #5B6577">Да, стенд работает с давлением 50–150 бар и подходит для GDI и FSI.</p>
+</details>
+<details>
+<summary>Что если одна форсунка хуже остальных?<svg aria-hidden="true" class="pm" fill="none" height="22" stroke="#0B1220" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24" width="22"><path d="M12 5v14M5 12h14"></path></svg></summary>
+<p style="padding-bottom: 26px; font-size: 16px; line-height: 1.65; color: #5B6577">Чистим её повторно. Если показатели не выровнялись, предлагаем заменить только её.</p>
+</details>
+<details>
+<summary>Где в Алматы проверить форсунки и получить отчёт?<svg aria-hidden="true" class="pm" fill="none" height="22" stroke="#0B1220" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24" width="22"><path d="M12 5v14M5 12h14"></path></svg></summary>
+<p style="padding-bottom: 26px; font-size: 16px; line-height: 1.65; color: #5B6577">Отчёт с замерами до и после делают в автосервисе VITON.KZ на Аносова 91 в Алматы (ежедневно 09:30–19:00, +7 747 495 61 65). Стенд работает с давлением 50–150 бар и подходит для форсунок распределённого и непосредственного впрыска. Проверку можно смотреть вживую, видео факела отправляем вам.</p>
+</details>
+</div>
+</div>
+<section id="author" style="margin-top: 8px; padding: 32px; border-radius: 24px; background: #F3F5F8; display: grid; grid-template-columns: 96px minmax(0,1fr); gap: 24px; align-items: start">
+<div style="width: 96px; height: 96px; border-radius: 50%; background: #0B1220; color: #FFFFFF; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px"><span style="font-size: 28px; font-weight: 800; letter-spacing: -.02em">ВН</span><span class="mono" style="font-size: 8px; color: #8A96A8">фото</span></div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<span class="mono" style="color: #0B6BD8; font-size: 11px">Автор статьи</span>
+<h3 style="font-size: 24px; letter-spacing: -.02em; font-weight: 800">Виктор Новиков</h3>
+<span style="font-size: 15px; font-weight: 600; color: #0B1220">Основатель VITON.KZ, Алматы</span>
+<p style="font-size: 16px; line-height: 1.6; color: #5B6577">Основатель сервиса VITON.KZ в Алматы. Пишет и проверяет материалы раздела «Полезное» на основе практики автосервиса на Аносова 91.</p>
+<span style="font-size: 13px; color: #7A4B00">Фото и короткую биографию прислать до запуска</span>
+</div>
+</section>
+</article>
+<aside style="position: sticky; top: 24px; display: flex; flex-direction: column; gap: 24px">
+<nav aria-label="Содержание" class="toc" style="display: flex; flex-direction: column; gap: 12px; padding: 28px; border: 1px solid #E3E8EF; border-radius: 24px">
+<span class="mono" style="color: #5B6577; font-size: 11px">Содержание</span>
+<a href="#s1">Что измеряет стенд?</a>
+<a href="#s2">Как читать цифры в отчёте?</a>
+<a href="#s3">Когда форсунку не спасти?</a>
+<a href="#s4">Что вы получаете на руки?</a>
+<a href="#where">Где получить отчёт о проверке форсунок в Алматы?</a>
+</nav>
+<div style="padding: 28px; border-radius: 24px; background: #0B1220; color: #FFFFFF; display: flex; flex-direction: column; gap: 16px">
+<span class="mono" style="color: #6FB9FF; font-size: 11px">Услуги по теме</span>
+<div style="display: flex; flex-direction: column">
+<a href="/ru/services/injector-cleaning/" style="display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 14px 0; border-top: 1px solid rgba(255,255,255,.1); color: #FFFFFF; font-weight: 700; font-size: 15px">Чистка форсунок<svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M7 17L17 7M9 7h8v8"></path></svg></a>
+<a href="/ru/services/computer-diagnostics/" style="display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 14px 0; border-top: 1px solid rgba(255,255,255,.1); color: #FFFFFF; font-weight: 700; font-size: 15px">Компьютерная диагностика<svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M7 17L17 7M9 7h8v8"></path></svg></a>
+</div>
+<a class="btn btn-p" href="https://wa.me/77474956165" style="width: 100%; margin-top: 8px"><svg aria-hidden="true" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 21l2-5.5A8.4 8.4 0 1 1 21 11.5z"></path></svg>Записаться</a>
+</div>
+</aside>
+</div>
+</div>
+</section>
+<section class="sec" style="background: #F3F5F8">
+<div class="w" style="display: flex; flex-direction: column; gap: 48px">
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap">
+<h2 class="h2">Читать дальше.</h2>
+<a class="btn btn-l" href="/ru/blog/">Все статьи</a>
+</div>
+<div class="g3">
+<a class="card" href="/ru/blog/chistka-forsunok-bez-snyatiya/" style="overflow: hidden; color: #0B1220; display: flex; flex-direction: column">
+<div style="height: 240px"><img alt="Снятые форсунки и ремкомплект на верстаке" class="cover" decoding="async" loading="lazy" src="/img/d5430f3d29fb8dd4c422ce33fd20bc67.jpg"/></div>
+<div style="padding: 28px; display: flex; flex-direction: column; gap: 10px; flex: 1"><span class="mono" style="color: #5B6577; font-size: 11px">Статья · Форсунки · 4 мин</span><h3 style="font-size: 21px; line-height: 1.3; font-weight: 700">Чистка форсунок без снятия: почему мы её не делаем</h3><p style="font-size: 15px; line-height: 1.6; color: #5B6577">Почему промывка через рампу не снимает нагар с сопел и что входит в чистку снятых форсунок.</p></div>
+</a>
+<a class="card" href="/ru/blog/priznaki-zagryaznennyh-forsunok/" style="overflow: hidden; color: #0B1220; display: flex; flex-direction: column">
+<div style="height: 240px"><img alt="Двигатель с топливной рампой и форсунками" class="cover" decoding="async" loading="lazy" src="/img/bc9a190427576b147c038d06c5cb4313.jpg"/></div>
+<div style="padding: 28px; display: flex; flex-direction: column; gap: 10px; flex: 1"><span class="mono" style="color: #5B6577; font-size: 11px">Статья · Форсунки · 5 мин</span><h3 style="font-size: 21px; line-height: 1.3; font-weight: 700">Признаки загрязнённых форсунок: 7 симптомов</h3><p style="font-size: 15px; line-height: 1.6; color: #5B6577">Неровный холостой ход, провалы, расход: как понять, что дело в форсунках, а не в свечах или подсосе воздуха.</p></div>
+</a>
+<a class="card" href="/ru/services/injector-cleaning/" style="overflow: hidden; color: #0B1220; display: flex; flex-direction: column">
+<div style="height: 240px"><img alt="Чистка форсунок" class="cover" decoding="async" loading="lazy" src="/img/237abe15d9cc2ea6d347a5255f20b2f7.jpg"/></div>
+<div style="padding: 28px; display: flex; flex-direction: column; gap: 10px; flex: 1"><span class="mono" style="color: #5B6577; font-size: 11px">Услуга</span><h3 style="font-size: 21px; font-weight: 700">Чистка форсунок</h3><p style="font-size: 15px; line-height: 1.6; color: #5B6577">Проверка на стенде, ультразвук, замена ремкомплекта, отчёт до и после.</p><span style="margin-top: auto; padding-top: 8px; display: inline-flex; align-items: center; gap: 8px; font-weight: 700; color: #0B6BD8; font-size: 15px">Подробнее<svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M7 17L17 7M9 7h8v8"></path></svg></span></div>
+</a>
+</div>
+</div>
+</section>
+<section style="padding: 0 0 128px">
+<div class="w">
+<div class="split" style="border-radius: 32px; background: #0B1220; color: #FFFFFF; padding: 72px; display: grid; grid-template-columns: minmax(0,1.3fr) minmax(0,1fr); gap: 48px; align-items: center">
+<div style="display: flex; flex-direction: column; gap: 20px">
+<h2 class="h2">Остались вопросы?</h2>
+<p style="font-size: 18px; line-height: 1.6; color: #AEB8C7; max-width: 520px">Напишите модель автомобиля и что беспокоит. Мастер подскажет, какую проверку сделать.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 14px">
+<a class="btn btn-p" href="https://wa.me/77474956165" style="width: 100%; min-height: 60px; font-size: 16px"><svg aria-hidden="true" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 21l2-5.5A8.4 8.4 0 1 1 21 11.5z"></path></svg>Записаться в WhatsApp</a>
+<a class="btn btn-g" href="tel:+77474956165" style="width: 100%; min-height: 60px; font-size: 16px">+7 747 495 61 65</a>
+</div>
+</div>
+</div>
+</section>
+<footer style="background: #070C16; color: #8A96A8; padding: 80px 0 40px">
+<div class="w" style="display: flex; flex-direction: column; gap: 64px">
+<div class="g4" style="grid-template-columns: minmax(0,1.3fr) repeat(3,minmax(0,1fr)); gap: 40px">
+<div style="display: flex; flex-direction: column; gap: 18px; font-size: 15px">
+<img alt="VITON.kz — лаборатория по чистке форсунок" decoding="async" loading="lazy" src="/img/acd804b0fe0796fc9f44f04e90299986.svg" style="width: 240px; height: auto; display: block"/>
+<p style="line-height: 1.6; max-width: 300px">Лаборатория и автосервис в Алматы.</p>
+<span class="mono" style="color: #5D6A7E; font-size: 11px; margin-top: 12px">Автосервис</span>
+<span style="color: #C9D2DF; line-height: 1.5">Аносова 91 · <a href="tel:+77474956165" style="color: #C9D2DF">+7 747 495 61 65</a><br/>Ежедневно, 09:30–19:00</span>
+<span class="mono" style="color: #5D6A7E; font-size: 11px; margin-top: 8px">Лаборатория</span>
+<span style="color: #C9D2DF; line-height: 1.5">Авторынок «Жибек Жолы», Райымбека 517/6, ряд 4Г · <a href="tel:+77471365088" style="color: #C9D2DF">+7 747 136 50 88</a><br/>Вт–Вс, 09:00–18:00</span>
+</div>
+<div class="fl" style="display: flex; flex-direction: column; gap: 11px; font-size: 15px">
+<a class="mono" href="/ru/services/" style="color: #5D6A7E; font-size: 11px; margin-bottom: 4px">Услуги</a>
+<a href="/ru/services/injector-cleaning/">Чистка форсунок</a>
+<a href="/ru/services/walnut-valve-cleaning/">Чистка впускных клапанов</a>
+<a href="/ru/services/computer-diagnostics/">Компьютерная диагностика</a>
+<a href="/ru/services/compression-test/">Замер компрессии</a>
+<a href="/ru/services/engine-endoscopy/">Эндоскопия двигателя</a>
+<a href="/ru/services/smoke-leak-test/">Поиск утечек дымогенератором</a>
+<a href="/ru/services/spark-plug-replacement/">Замена свечей зажигания</a>
+<a href="/ru/services/oil-coolant-leak-repair/">Устранение течи масла и антифриза</a>
+<a href="/ru/services/valve-cover-gasket/">Замена прокладки клапанной крышки</a>
+<a href="/ru/services/timing-belt-replacement/">Замена ремня ГРМ</a>
+<a href="/ru/services/crankshaft-seal-replacement/">Замена сальников коленвала</a>
+<a href="/ru/services/ac-refill/">Заправка кондиционера</a>
+<a href="/ru/services/heater-cleaning/">Чистка печки</a>
+</div>
+<div class="fl" style="display: flex; flex-direction: column; gap: 11px; font-size: 15px">
+<a class="mono" href="/ru/blog/" style="color: #5D6A7E; font-size: 11px; margin-bottom: 4px">Полезное</a>
+<a href="/ru/blog/priznaki-zagryaznennyh-forsunok/">Признаки загрязнённых форсунок</a>
+<a href="/ru/blog/chistka-forsunok-bez-snyatiya/">Почему чистим только со снятием</a>
+<a href="/ru/blog/proverka-forsunok-na-stende/">Проверка форсунок на стенде</a>
+<a href="/ru/blog/nagar-na-vpusknyh-klapanah-gdi/">Нагар на клапанах GDI</a>
+<a href="/ru/blog/dymogenerator-podsos-vozduha/">Как работает дымогенератор</a>
+<a href="/ru/blog/kogda-menyat-remen-grm/">Когда менять ремень ГРМ</a>
+<a href="/ru/blog/kak-chasto-zapravlyat-kondicioner/">Как часто заправлять кондиционер</a>
+<a href="/ru/blog/proverka-dvigatelya-pered-pokupkoj/">Проверка мотора перед покупкой</a>
+</div>
+<div class="fl" style="display: flex; flex-direction: column; gap: 11px; font-size: 15px">
+<span class="mono" style="color: #5D6A7E; font-size: 11px; margin-bottom: 4px">Разделы</span>
+<a href="/ru/">Главная</a>
+<a href="/ru/contacts/">Лаборатория</a>
+<a href="/ru/hyperfuel/">Hyperfuel</a>
+<a href="/ru/contacts/">Контакты</a>
+<a href="https://instagram.com/viton.kz">Instagram</a>
+<a href="https://tiktok.com/@viton.kz">TikTok</a>
+<a href="https://2gis.kz/almaty/firm/70000001104923219">2ГИС</a>
+</div>
+</div>
+<div style="display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding-top: 28px; border-top: 1px solid rgba(255,255,255,.08); font-size: 13px">
+<span>© 2026 VITON.KZ · ИП «Новиков Viton.kz» <span style="color: #FFCF7A">· ИИН/БИН и юр. адрес уточнить</span></span>
+<a href="#" style="color: #8A96A8">Политика данных</a>
+</div>
+</div>
+</footer>
+<nav aria-label="Быстрая запись" class="mbar">
+<a class="btn btn-p" href="https://wa.me/77474956165"><svg aria-hidden="true" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 21l2-5.5A8.4 8.4 0 1 1 21 11.5z"></path></svg>WhatsApp</a>
+<a class="btn btn-g" href="tel:+77474956165"><svg aria-hidden="true" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"></path></svg>Позвонить</a>
+</nav>
+
+</body>
+</html>

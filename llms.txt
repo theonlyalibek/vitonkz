@@ -1,0 +1,37 @@
+# VITON.KZ
+
+> Автосервис и лаборатория по чистке бензиновых форсунок в Алматы. Основная точка: ул. Аносова, 91, ежедневно 09:30–19:00, +7 747 495 61 65. Форсунки чистим только со снятием: проверка на стенде, ультразвук, замена ремкомплекта, отчёт с замерами до и после.
+
+## Контакты
+- Автосервис: Алматы, ул. Аносова, 91. Ежедневно 09:30–19:00. +7 747 495 61 65, WhatsApp: https://wa.me/77474956165
+- Лаборатория для снятых форсунок: авторынок «Жибек Жолы», пр. Райымбека 517/6, ряд 4Г, место 52. Вт–Вс 09:00–18:00. +7 747 136 50 88
+- Цены указаны на странице каждой услуги.
+
+## Услуги
+- [Чистка форсунок](https://viton.kz/ru/services/injector-cleaning/)
+- [Чистка впускных клапанов](https://viton.kz/ru/services/walnut-valve-cleaning/)
+- [Компьютерная диагностика](https://viton.kz/ru/services/computer-diagnostics/)
+- [Замер компрессии](https://viton.kz/ru/services/compression-test/)
+- [Эндоскопия двигателя](https://viton.kz/ru/services/engine-endoscopy/)
+- [Поиск утечек дымогенератором](https://viton.kz/ru/services/smoke-leak-test/)
+- [Замена свечей зажигания](https://viton.kz/ru/services/spark-plug-replacement/)
+- [Устранение течи масла и антифриза](https://viton.kz/ru/services/oil-coolant-leak-repair/)
+- [Замена прокладки клапанной крышки](https://viton.kz/ru/services/valve-cover-gasket/)
+- [Замена ремня ГРМ](https://viton.kz/ru/services/timing-belt-replacement/)
+- [Замена сальников коленвала](https://viton.kz/ru/services/crankshaft-seal-replacement/)
+- [Заправка кондиционера](https://viton.kz/ru/services/ac-refill/)
+- [Чистка печки](https://viton.kz/ru/services/heater-cleaning/)
+
+## Статьи
+- [Признаки загрязнённых форсунок: 7 симптомов](https://viton.kz/ru/blog/priznaki-zagryaznennyh-forsunok/)
+- [Чистка форсунок без снятия: почему мы её не делаем](https://viton.kz/ru/blog/chistka-forsunok-bez-snyatiya/)
+- [Проверка форсунок на стенде: что показывает отчёт](https://viton.kz/ru/blog/proverka-forsunok-na-stende/)
+- [Нагар на впускных клапанах GDI: откуда берётся и как убрать](https://viton.kz/ru/blog/nagar-na-vpusknyh-klapanah-gdi/)
+- [Дымогенератор: как находят подсос воздуха и утечки](https://viton.kz/ru/blog/dymogenerator-podsos-vozduha/)
+- [Когда менять ремень ГРМ и что будет, если опоздать](https://viton.kz/ru/blog/kogda-menyat-remen-grm/)
+- [Как часто заправлять кондиционер автомобиля](https://viton.kz/ru/blog/kak-chasto-zapravlyat-kondicioner/)
+- [Как проверить двигатель перед покупкой: диагностика, компрессия, эндоскопия](https://viton.kz/ru/blog/proverka-dvigatelya-pered-pokupkoj/)
+
+## Другое
+- [Присадки Hyper Fuel M1 и Aplidium](https://viton.kz/ru/hyperfuel/)
+- [Казахская версия сайта](https://viton.kz/kk/)
