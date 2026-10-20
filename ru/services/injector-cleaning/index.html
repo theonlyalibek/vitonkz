@@ -95,6 +95,16 @@ img.cover{height:100%}
 div.card:hover{border-color:#E3E8EF;transform:none;box-shadow:none}
 @media (hover:none){.card:hover{transform:none !important;box-shadow:none !important}}
 html{scroll-behavior:smooth}
+
+/* plain captions instead of tracked mono caps; mono stays for numbers and dates */
+.mono:not(.num):not(#_){font-family:'Manrope',system-ui,sans-serif !important;text-transform:none !important;letter-spacing:0 !important;font-size:13px !important;font-weight:600}
+.mono.num{letter-spacing:.04em}
+.mm-cap,.mm-places small{font-family:'Manrope',system-ui,sans-serif !important;text-transform:none !important;letter-spacing:0 !important;font-size:12px !important;font-weight:600}
+[style*="border-radius: 32px"],[style*="border-radius: 28px"]{border-radius:20px !important}
+[style*="border-radius: 24px"],[style*="border-radius: 22px"]{border-radius:16px !important}
+.card{border-radius:16px}
+@media (min-width:1101px){h1.h1[style*="font-size: 96px"]{font-size:76px !important;line-height:1 !important}}
+span[style*="width: 44px; height: 44px; border-radius: 12px"]{background:none !important;width:auto !important;height:auto !important;justify-content:flex-start !important;color:#0B6BD8}
 @media (max-width:760px){
  footer{padding-bottom:calc(92px + env(safe-area-inset-bottom)) !important}
  html.mlock{overflow:hidden}
@@ -135,13 +145,11 @@ html{scroll-behavior:smooth}
  .mbtn:active{transform:scale(.97)}
  .mbtn-wa{background:#25D366;color:#06210F}.mbtn-wa:hover{color:#06210F}
  .mbtn-g{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);color:#FFFFFF}.mbtn-g:hover{color:#FFFFFF}
- .fbar{display:flex;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:80;padding:10px 12px calc(10px + env(safe-area-inset-bottom));border-radius:22px 22px 0 0;background:#0B1220;border-top:1px solid rgba(255,255,255,.08);box-shadow:0 -10px 30px rgba(7,12,22,.22);animation:barIn .6s .5s cubic-bezier(.2,.7,.2,1) both;transition:transform .35s,opacity .35s}
+ .fbar{display:flex;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:80;padding:10px 12px calc(10px + env(safe-area-inset-bottom));border-radius:16px 22px 0 0;background:#0B1220;border-top:1px solid rgba(255,255,255,.08);box-shadow:0 -10px 30px rgba(7,12,22,.22);animation:barIn .6s .5s cubic-bezier(.2,.7,.2,1) both;transition:transform .35s,opacity .35s}
  .fbar.hide{transform:translateY(110%)}
  .fbar .mbtn-wa{flex:1;height:50px}
  .fbar-call{width:50px;height:50px;padding:0;background:rgba(255,255,255,.1);color:#FFFFFF}.fbar-call:hover{color:#FFFFFF}
  .wa-ic{position:relative;display:inline-flex}
- .wa-ic::after{content:"";position:absolute;inset:-6px;border-radius:50%;border:2px solid rgba(6,33,15,.45);animation:ring 2.8s 1.5s ease-out infinite}
- @keyframes ring{0%{transform:scale(.6);opacity:1}70%,100%{transform:scale(1.5);opacity:0}}
  @keyframes barIn{from{transform:translateY(110%)}to{transform:none}}
 
  /* typography & rhythm */
@@ -176,7 +184,7 @@ html{scroll-behavior:smooth}
  [style^="height: 460px"],[style*="; height: 460px"],[style^="height: 400px"],[style*="; height: 400px"],[style^="height: 360px"],[style*="; height: 360px"]{height:220px !important}
  [style^="height: 280px"],[style*="; height: 280px"],[style^="height: 260px"],[style*="; height: 260px"]{height:180px !important}
  [style*="min-height: 420px"],[style*="min-height: 340px"]{min-height:0 !important}
- .card{border-radius:20px !important}
+ .card{border-radius:16px !important}
  summary{font-size:16px !important;padding:16px 0 !important;gap:14px !important;line-height:1.3}
  details p,details>div{font-size:15px !important}
  div[style*="justify-content: space-between; align-items: flex-end"]{flex-direction:column;align-items:flex-start !important;gap:12px !important}
@@ -198,14 +206,14 @@ html{scroll-behavior:smooth}
  .m-hero-col>.mono>span{display:none}
  .m-hero-col>h1{order:2;font-size:38px !important;line-height:1.02 !important}
  .m-hero-col>p:not(.m-hero-note){order:3;font-size:15px !important}
- .m-hero-img{order:4;height:210px !important;border-radius:22px !important}
+ .m-hero-img{order:4;height:210px !important;border-radius:16px !important}
  .m-hero-img>div{padding:8px 12px !important;border-radius:14px !important}
  .m-hero-img>div[style*="top: 24px"]{top:12px !important;right:auto !important;left:12px !important}
  .m-hero-img>div[style*="bottom: 24px"]{left:12px !important;bottom:12px !important}
  .m-hero-img>div span[style*="font-size: 13px"]{display:none !important}
  .m-hero-img>div>span[style*="width: 40px"]{width:28px !important;height:28px !important;border-radius:8px !important}
  .m-hero-cta{order:5;display:grid !important;grid-template-columns:1fr 1fr;gap:10px !important}
- .m-hero-cta .btn{flex-direction:column;align-items:flex-start !important;justify-content:flex-start !important;text-align:left !important;min-height:112px !important;border-radius:18px !important;padding:14px !important;gap:10px;font-size:15px !important;line-height:1.2 !important;width:auto !important}
+ .m-hero-cta .btn{flex-direction:column;align-items:flex-start !important;justify-content:flex-start !important;text-align:left !important;min-height:112px !important;border-radius:14px !important;padding:14px !important;gap:10px;font-size:15px !important;line-height:1.2 !important;width:auto !important}
  .m-hero-cta .btn>svg{display:none}
  .m-hero-cta .btn::after{content:attr(data-sub);font-size:12px;font-weight:600;opacity:.7;margin-top:auto}
  .m-ic{display:inline-flex;width:34px;height:34px;border-radius:10px;align-items:center;justify-content:center;background:rgba(255,255,255,.16)}
@@ -231,7 +239,7 @@ html{scroll-behavior:smooth}
  .m-shero div[style*="grid-template-columns: repeat(3"]>div:first-child{padding-left:0 !important}
  .m-shero div[style*="grid-template-columns: repeat(3"] span[style*="font-size: 24px"]{font-size:17px !important}
  .m-shero div[style*="grid-template-columns: repeat(3"] span[style*="font-size: 13px"]{font-size:11px !important}
- .m-shero>div:last-child{height:220px !important;border-radius:22px !important}
+ .m-shero>div:last-child{height:220px !important;border-radius:16px !important}
 
  /* picker */
  .m-picker{padding:48px 0 !important}
@@ -240,7 +248,7 @@ html{scroll-behavior:smooth}
  .pk-btn{min-height:38px !important;padding:8px 14px !important;border-radius:999px !important;font-size:14px !important;background:#FFFFFF !important;border:1px solid #D7DEE8 !important;line-height:1.2 !important;transition:background .2s,color .2s,transform .15s}
  .pk-btn:active{transform:scale(.95)}
  .pk-btn[aria-pressed="true"]{background:#0B1220 !important;color:#FFFFFF !important;border-color:#0B1220 !important}
- .m-picker [aria-live]{padding:20px !important;border-radius:22px !important;gap:10px !important}
+ .m-picker [aria-live]{padding:20px !important;border-radius:16px !important;gap:10px !important}
  .m-picker #pk-title{font-size:21px !important}
  .m-picker #pk-why{font-size:14px !important}
  .m-picker [aria-live] .btn{min-height:44px !important;font-size:14px !important;border-radius:14px}
@@ -255,26 +263,26 @@ html{scroll-behavior:smooth}
  .mdots i{width:6px;height:6px;border-radius:3px;background:#CFD6E1;display:block;transition:width .3s,background .3s}
  .mdots i.on{width:18px;background:#0B6BD8}
  .mdots-d i{background:rgba(255,255,255,.2)}.mdots-d i.on{background:#0290FE}
- .mcar-fc>.fc{display:block !important;position:relative;width:286px;height:340px;min-height:0 !important;border:0 !important;border-radius:22px !important}
+ .mcar-fc>.fc{display:block !important;position:relative;width:286px;height:340px;min-height:0 !important;border:0 !important;border-radius:16px !important}
  .mcar-fc>.fc>div:last-child{position:absolute !important;inset:0;min-height:0 !important}
  .mcar-fc>.fc>div:first-child{position:absolute;left:0;right:0;bottom:0;z-index:1;padding:80px 18px 18px !important;gap:6px !important;background:linear-gradient(180deg,rgba(7,12,22,0),rgba(7,12,22,.92) 45%)}
  .mcar-fc>.fc *{color:#FFFFFF !important}
  .mcar-fc>.fc .mono{color:#9FD2FF !important;font-size:10px !important}
  .mcar-fc>.fc p{font-size:13px !important;color:#C9D2DF !important}
  .mcar-fc>.fc h3{font-size:21px !important}
- .mcar-pic>div{width:286px;height:220px !important;border-radius:22px !important;position:relative}
+ .mcar-pic>div{width:286px;height:220px !important;border-radius:16px !important;position:relative}
  .mcar-pic>div::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(7,12,22,0) 45%,rgba(7,12,22,.85));pointer-events:none}
  .mcar-pic>div>div{z-index:2;left:16px !important;right:16px !important;bottom:14px !important}
  .mcar-pic>div span[style*="font-size: 28px"]{font-size:17px !important}
  .mcar-pic>div[style*="background: #0B1220"]{padding:20px !important}
- .mcar-place>div{min-height:0 !important;width:318px;padding:20px !important;gap:14px !important;border-radius:22px !important}
+ .mcar-place>div{min-height:0 !important;width:318px;padding:20px !important;gap:14px !important;border-radius:16px !important}
  .mcar-place>div p{font-size:14px !important}
  .mcar-place .g2{gap:10px 14px !important;font-size:13px !important}
  .mcar-place .btn{width:100% !important;align-self:stretch !important;min-height:46px !important;border-radius:14px}
  .mcar-rv>figure{width:300px;padding:18px !important;gap:12px !important}
  .mcar-rv blockquote{font-size:15px !important}
  .mcar-art>a{width:252px;gap:10px !important}
- .mcar-art>a>div:first-child{border-radius:18px !important}
+ .mcar-art>a>div:first-child{border-radius:14px !important}
  .mcar-art>a>div:first-child{height:136px !important}
  .mcar-art>a>div:last-child{padding:14px !important;gap:6px !important}
  .mcar-art h3{font-size:15px !important;line-height:1.3 !important}
@@ -288,18 +296,18 @@ html{scroll-behavior:smooth}
  .mhcard p{font-size:13px !important;line-height:1.4 !important;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
  .mhcard .mono{font-size:9px !important}
  .mhcard>a>div:last-child>span:last-child:not(.mono){display:none !important}
- .m-svc-help{display:flex !important;flex-direction:row !important;align-items:center;gap:14px !important;min-height:0 !important;padding:16px !important;margin-top:12px;border-radius:20px !important}
+ .m-svc-help{display:flex !important;flex-direction:row !important;align-items:center;gap:14px !important;min-height:0 !important;padding:16px !important;margin-top:12px;border-radius:16px !important}
  .m-svc-help h3{font-size:15px !important}.m-svc-help p{font-size:13px !important}
  /* lists */
- .mlist{display:flex !important;flex-direction:column;gap:0 !important;border:1px solid #E3E8EF;border-radius:20px;background:#FFFFFF;overflow:hidden}
- .mlist>*{display:grid !important;grid-template-columns:40px 1fr 16px;grid-template-rows:auto auto;column-gap:14px;row-gap:2px !important;align-items:center;padding:14px 16px !important;min-height:0 !important;border:0 !important;border-top:1px solid #EEF1F5 !important;border-radius:0 !important;background:#FFFFFF !important;position:relative}
+ .mlist{display:flex !important;flex-direction:column;gap:0 !important;border:1px solid #E3E8EF;border-radius:16px;background:#FFFFFF;overflow:hidden}
+ .mlist>*{display:grid !important;grid-template-columns:28px 1fr 16px;grid-template-rows:auto auto;column-gap:14px;row-gap:2px !important;align-items:center;padding:14px 16px !important;min-height:0 !important;border:0 !important;border-top:1px solid #EEF1F5 !important;border-radius:0 !important;background:#FFFFFF !important;position:relative}
  .mlist>*:first-child{border-top:0 !important}
- .mlist>*>svg,.mlist>*>span:first-child{grid-row:1/3;width:40px !important;height:40px !important;border-radius:12px !important;background:#EEF5FF !important;display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box}
- .mlist>*>svg{padding:10px}
+ .mlist>*>svg,.mlist>*>span:first-child{grid-row:1/3;width:28px !important;height:28px !important;border-radius:0 !important;background:none !important;color:#0B6BD8;display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box}
+ .mlist>*>svg{padding:2px}
  .mlist h3{font-size:15px !important;line-height:1.25 !important;grid-column:2;align-self:end}
  .mlist p{font-size:13px !important;line-height:1.35 !important;grid-column:2;align-self:start}
  .mlist-svc>a::after{content:"";grid-column:3;grid-row:1/3;width:8px;height:8px;border-right:2px solid #9AA4B2;border-top:2px solid #9AA4B2;transform:rotate(45deg)}
- .mlist-plain>*{grid-template-columns:40px 1fr}
+ .mlist-plain>*{grid-template-columns:28px 1fr}
  /* tiles, stats, steps */
  .m2{grid-template-columns:1fr 1fr !important;gap:8px !important}
  .m2>*{padding:14px !important;gap:6px !important;border-radius:16px !important}
@@ -334,13 +342,9 @@ html{scroll-behavior:smooth}
 }
 /* motion: everywhere, only when allowed */
 @media (prefers-reduced-motion:no-preference){
- .js-anim .rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
- .js-anim .rv.in{opacity:1;transform:none}
  body>div:first-of-type h1,body>div:first-of-type h1+p,body>div:first-of-type .mono,.mstatus,.m-hero-cta,.m-hero-rate{animation:heroIn .8s cubic-bezier(.2,.7,.2,1) both}
  body>div:first-of-type h1{animation-delay:.08s}body>div:first-of-type h1+p{animation-delay:.18s}.m-hero-cta{animation-delay:.32s}.m-hero-rate{animation-delay:.42s}
  @keyframes heroIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
- .hero-grid>div:last-child img,.hero>div:last-child img{animation:kb 18s ease-in-out infinite alternate;transform-origin:50% 70%}
- @keyframes kb{from{transform:scale(1)}to{transform:scale(1.08)}}
  .card,.btn{transition:transform .2s,border-color .2s,background .2s,box-shadow .2s}
  .btn:active{transform:scale(.97)}
  a.card:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(11,18,32,.08)}
@@ -365,7 +369,7 @@ html{scroll-behavior:smooth}
  .sec[style*="padding-top: 0"]{padding-top:0 !important}
  .m-svc-help+*{margin-top:16px !important}
  div[style*="flex-wrap: wrap"]>div[style*="padding: 16px 22px 16px 18px"]{flex:1 1 100%}
- .hf{border-radius:26px !important}
+ .hf{border-radius:20px !important}
  .hf>div:first-child{padding:28px 22px !important;gap:16px !important}
  .hf .hf-media{min-height:0 !important;height:auto;display:flex;flex-direction:column;justify-content:flex-end;aspect-ratio:auto;padding:220px 12px 12px}
  .hf .hf-media>img{height:100% !important}
@@ -378,7 +382,7 @@ html{scroll-behavior:smooth}
 }
 
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Чистка бензиновых форсунок в Алматы.", "description": "VITON", "url": "https://viton.kz/ru/services/injector-cleaning/", "inLanguage": "ru", "provider": {"@id": "https://viton.kz/#anosova"}, "areaServed": {"@type": "City", "name": "Алматы"}, "offers": {"@type": "Offer", "priceCurrency": "KZT", "priceSpecification": {"@type": "PriceSpecification", "minPrice": 2500, "priceCurrency": "KZT"}}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "AutoRepair", "@id": "https://viton.kz/#anosova", "name": "VITON.KZ — автосервис на Аносова 91", "url": "https://viton.kz/ru/", "telephone": "+7 747 495 61 65", "image": "https://viton.kz/img/35696b5e5c1ad6e0d1d56b1c6a9eefd4.jpg", "logo": "https://viton.kz/img/acd804b0fe0796fc9f44f04e90299986.svg", "address": {"@type": "PostalAddress", "streetAddress": "ул. Аносова, 91", "addressLocality": "Алматы", "addressCountry": "KZ"}, "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "09:30", "closes": "19:00"}], "areaServed": {"@type": "City", "name": "Алматы"}, "sameAs": ["https://instagram.com/viton.kz", "https://tiktok.com/@viton.kz", "https://2gis.kz/almaty/firm/70000001104923219"]}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Сколько стоит чистка форсунок?", "acceptedAnswer": {"@type": "Answer", "text": "Чистка от 2 500 ₸ за форсунку. Если снимаем сами, снятие и установка оплачиваются отдельно, весь комплекс обычно от 30 000 ₸. Ремкомплект от 500 ₸ за форсунку, тефлоновые кольца от 1 000 ₸. Итог зависит от типа форсунок и называем его до начала работ."}}, {"@type": "Question", "name": "Подходит ли чистка любому двигателю?", "acceptedAnswer": {"@type": "Answer", "text": "Работаем с бензиновыми двигателями автомобилей от 2010 года. Дизельные форсунки не обслуживаем. Применимость уточним по модели."}}, {"@type": "Question", "name": "Что делать, если чистка не помогла?", "acceptedAnswer": {"@type": "Answer", "text": "Если форсунка не восстанавливается, это видно на стенде. Скажем об этом прямо и предложим варианты."}}, {"@type": "Question", "name": "Что прислать перед записью?", "acceptedAnswer": {"@type": "Answer", "text": "Марку, модель, год и объём двигателя, а также что именно беспокоит."}}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://viton.kz/ru/"}, {"@type": "ListItem", "position": 2, "name": "Услуги", "item": "https://viton.kz/ru/services/"}, {"@type": "ListItem", "position": 3, "name": "Чистка бензиновых форсунок в Алматы.", "item": "https://viton.kz/ru/services/injector-cleaning/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Чистка бензиновых форсунок в Алматы", "description": "VITON", "url": "https://viton.kz/ru/services/injector-cleaning/", "inLanguage": "ru", "provider": {"@id": "https://viton.kz/#anosova"}, "areaServed": {"@type": "City", "name": "Алматы"}, "offers": {"@type": "Offer", "priceCurrency": "KZT", "priceSpecification": {"@type": "PriceSpecification", "minPrice": 2500, "priceCurrency": "KZT"}}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "AutoRepair", "@id": "https://viton.kz/#anosova", "name": "VITON.KZ — автосервис на Аносова 91", "url": "https://viton.kz/ru/", "telephone": "+7 747 495 61 65", "image": "https://viton.kz/img/35696b5e5c1ad6e0d1d56b1c6a9eefd4.jpg", "logo": "https://viton.kz/img/acd804b0fe0796fc9f44f04e90299986.svg", "address": {"@type": "PostalAddress", "streetAddress": "ул. Аносова, 91", "addressLocality": "Алматы", "addressCountry": "KZ"}, "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "09:30", "closes": "19:00"}], "areaServed": {"@type": "City", "name": "Алматы"}, "sameAs": ["https://instagram.com/viton.kz", "https://tiktok.com/@viton.kz", "https://2gis.kz/almaty/firm/70000001104923219"]}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Сколько стоит чистка форсунок?", "acceptedAnswer": {"@type": "Answer", "text": "Чистка от 2 500 ₸ за форсунку. Если снимаем сами, снятие и установка оплачиваются отдельно, весь комплекс обычно от 30 000 ₸. Ремкомплект от 500 ₸ за форсунку, тефлоновые кольца от 1 000 ₸. Итог зависит от типа форсунок и называем его до начала работ."}}, {"@type": "Question", "name": "Подходит ли чистка любому двигателю?", "acceptedAnswer": {"@type": "Answer", "text": "Работаем с бензиновыми двигателями автомобилей от 2010 года. Дизельные форсунки не обслуживаем. Применимость уточним по модели."}}, {"@type": "Question", "name": "Что делать, если чистка не помогла?", "acceptedAnswer": {"@type": "Answer", "text": "Если форсунка не восстанавливается, это видно на стенде. Скажем об этом прямо и предложим варианты."}}, {"@type": "Question", "name": "Что прислать перед записью?", "acceptedAnswer": {"@type": "Answer", "text": "Марку, модель, год и объём двигателя, а также что именно беспокоит."}}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://viton.kz/ru/"}, {"@type": "ListItem", "position": 2, "name": "Услуги", "item": "https://viton.kz/ru/services/"}, {"@type": "ListItem", "position": 3, "name": "Чистка бензиновых форсунок в Алматы", "item": "https://viton.kz/ru/services/injector-cleaning/"}]}</script>
 </head>
 <body>
 
@@ -401,7 +405,7 @@ html{scroll-behavior:smooth}
 <div class="w hero m-shero" style="padding-top: 48px; padding-bottom: 96px">
 <div style="display: flex; flex-direction: column; gap: 28px">
 <div class="mono" style="display: inline-flex; align-items: center; gap: 12px; color: #6FB9FF"><span style="width: 28px; height: 1px; background: #0290FE"></span>Услуга · бензиновые форсунки</div>
-<h1 class="h1" style="font-size: 72px; line-height: 1; letter-spacing: -.04em; font-weight: 800">Чистка бензиновых форсунок<br/><span style="color: #0290FE">в Алматы.</span></h1>
+<h1 class="h1" style="font-size: 72px; line-height: 1; letter-spacing: -.04em; font-weight: 800">Чистка бензиновых форсунок<br/><span style="color: #0290FE">в Алматы</span></h1>
 <p style="font-size: 19px; line-height: 1.6; color: #AEB8C7; max-width: 540px">Проверяем каждую форсунку на стенде, чистим ультразвуком и промывкой, затем тестируем повторно. Результат до и после вы видите сами.</p>
 <div style="display: flex; gap: 12px; flex-wrap: wrap">
 <a class="btn btn-p" href="https://wa.me/77474956165">Записаться в WhatsApp</a>
@@ -426,26 +430,26 @@ html{scroll-behavior:smooth}
 <div class="w" style="display: flex; flex-direction: column; gap: 56px">
 <div class="split" style="align-items: end">
 <div style="display: flex; flex-direction: column; gap: 18px">
-<div class="mono" style="color: #0B6BD8">Когда обращаться</div>
-<h2 class="h2">Признаки, что форсункам нужна проверка.</h2>
+
+<h2 class="h2">Признаки, что форсункам нужна проверка</h2>
 </div>
 <p class="lead" style="max-width: 560px">Эти симптомы бывают и по другим причинам. Поэтому сначала проверяем на стенде и только потом предлагаем чистку.</p>
 </div>
 <div class="g3 m2">
-<div class="card" style="padding: 32px; display: flex; flex-direction: column; gap: 14px"><span class="mono" style="color: #0B6BD8">01</span><h3 style="font-size: 21px; font-weight: 700">Неровный холостой ход</h3><p style="font-size: 15px; line-height: 1.6; color: #5B6577">Двигатель троит или подёргивается на месте.</p></div>
-<div class="card" style="padding: 32px; display: flex; flex-direction: column; gap: 14px"><span class="mono" style="color: #0B6BD8">02</span><h3 style="font-size: 21px; font-weight: 700">Вырос расход топлива</h3><p style="font-size: 15px; line-height: 1.6; color: #5B6577">Без изменения манеры езды и маршрутов.</p></div>
-<div class="card" style="padding: 32px; display: flex; flex-direction: column; gap: 14px"><span class="mono" style="color: #0B6BD8">03</span><h3 style="font-size: 21px; font-weight: 700">Провалы при разгоне</h3><p style="font-size: 15px; line-height: 1.6; color: #5B6577">Машина хуже тянет, реагирует с задержкой.</p></div>
-<div class="card" style="padding: 32px; display: flex; flex-direction: column; gap: 14px"><span class="mono" style="color: #0B6BD8">04</span><h3 style="font-size: 21px; font-weight: 700">Трудный запуск</h3><p style="font-size: 15px; line-height: 1.6; color: #5B6577">Особенно на холодную или после стоянки.</p></div>
-<div class="card" style="padding: 32px; display: flex; flex-direction: column; gap: 14px"><span class="mono" style="color: #0B6BD8">05</span><h3 style="font-size: 21px; font-weight: 700">Ошибки по смеси</h3><p style="font-size: 15px; line-height: 1.6; color: #5B6577">Пропуски зажигания, бедная или богатая смесь.</p></div>
-<div class="card" style="padding: 32px; display: flex; flex-direction: column; gap: 14px"><span class="mono" style="color: #0B6BD8">06</span><h3 style="font-size: 21px; font-weight: 700">Плановое обслуживание</h3><p style="font-size: 15px; line-height: 1.6; color: #5B6577">После большого пробега или сомнительного топлива.</p></div>
+<div class="card" style="padding: 32px; display: flex; flex-direction: column; gap: 14px"><h3 style="font-size: 21px; font-weight: 700">Неровный холостой ход</h3><p style="font-size: 15px; line-height: 1.6; color: #5B6577">Двигатель троит или подёргивается на месте.</p></div>
+<div class="card" style="padding: 32px; display: flex; flex-direction: column; gap: 14px"><h3 style="font-size: 21px; font-weight: 700">Вырос расход топлива</h3><p style="font-size: 15px; line-height: 1.6; color: #5B6577">Без изменения манеры езды и маршрутов.</p></div>
+<div class="card" style="padding: 32px; display: flex; flex-direction: column; gap: 14px"><h3 style="font-size: 21px; font-weight: 700">Провалы при разгоне</h3><p style="font-size: 15px; line-height: 1.6; color: #5B6577">Машина хуже тянет, реагирует с задержкой.</p></div>
+<div class="card" style="padding: 32px; display: flex; flex-direction: column; gap: 14px"><h3 style="font-size: 21px; font-weight: 700">Трудный запуск</h3><p style="font-size: 15px; line-height: 1.6; color: #5B6577">Особенно на холодную или после стоянки.</p></div>
+<div class="card" style="padding: 32px; display: flex; flex-direction: column; gap: 14px"><h3 style="font-size: 21px; font-weight: 700">Ошибки по смеси</h3><p style="font-size: 15px; line-height: 1.6; color: #5B6577">Пропуски зажигания, бедная или богатая смесь.</p></div>
+<div class="card" style="padding: 32px; display: flex; flex-direction: column; gap: 14px"><h3 style="font-size: 21px; font-weight: 700">Плановое обслуживание</h3><p style="font-size: 15px; line-height: 1.6; color: #5B6577">После большого пробега или сомнительного топлива.</p></div>
 </div>
 </div>
 </section>
 <section class="sec" id="price" style="background: #F3F5F8">
 <div class="w" style="display: flex; flex-direction: column; gap: 56px">
 <div style="display: flex; flex-direction: column; gap: 18px; max-width: 760px">
-<div class="mono" style="color: #0B6BD8">Варианты и цены</div>
-<h2 class="h2">Чистим только снятые форсунки.</h2>
+
+<h2 class="h2">Чистим только снятые форсунки</h2>
 <p class="lead">Промывку без снятия не делаем: основной нагар остаётся на соплах, а химия может навредить двигателю. <a href="/ru/blog/chistka-forsunok-bez-snyatiya/">Почему так</a>. Четыре снятые форсунки обойдутся от 10 000 ₸. Цены на 20.10.2026, итог согласуем до начала работ.</p>
 </div>
 <div class="g2">
@@ -486,7 +490,7 @@ html{scroll-behavior:smooth}
 <div class="split" style="align-items: start">
 <div style="display: flex; flex-direction: column; gap: 14px">
 <div class="mono" style="color: #0B6BD8">Детали и замена</div>
-<h3 style="font-size: 32px; line-height: 1.15; letter-spacing: -.02em; font-weight: 800">Снятие, ремкомплект и уплотнители.</h3>
+<h3 style="font-size: 32px; line-height: 1.15; letter-spacing: -.02em; font-weight: 800">Снятие, ремкомплект и уплотнители</h3>
 <p style="font-size: 16px; line-height: 1.6; color: #5B6577">Снятие и установка форсунок оплачиваются отдельно от чистки, цена зависит от двигателя. Старые кольца и сеточки меняем на новые, на моторах GDI обязательно меняем тефлоновые кольца.</p>
 </div>
 <div style="border-radius: 28px; background: #FFFFFF; padding: 8px 36px">
@@ -502,15 +506,15 @@ html{scroll-behavior:smooth}
 <section class="sec">
 <div class="w" style="display: flex; flex-direction: column; gap: 56px">
 <div style="display: flex; flex-direction: column; gap: 18px; max-width: 760px">
-<div class="mono" style="color: #0B6BD8">Как проходит работа</div>
-<h2 class="h2">Пять шагов от записи до отчёта.</h2>
+
+<h2 class="h2">Как проходит чистка</h2>
 </div>
 <div class="g5 msteps">
-<div style="display: flex; flex-direction: column; gap: 14px; padding-top: 24px; border-top: 2px solid #0B6BD8"><span class="mono" style="color: #0B6BD8">01</span><h3 style="font-size: 19px; font-weight: 700">Запись</h3><p style="font-size: 14px; line-height: 1.6; color: #5B6577">Модель авто и симптомы в WhatsApp.</p></div>
-<div style="display: flex; flex-direction: column; gap: 14px; padding-top: 24px; border-top: 2px solid #0B6BD8"><span class="mono" style="color: #0B6BD8">02</span><h3 style="font-size: 19px; font-weight: 700">Снятие и проверка</h3><p style="font-size: 14px; line-height: 1.6; color: #5B6577">Замеры производительности и факела.</p></div>
-<div style="display: flex; flex-direction: column; gap: 14px; padding-top: 24px; border-top: 2px solid #0B6BD8"><span class="mono" style="color: #0B6BD8">03</span><h3 style="font-size: 19px; font-weight: 700">Согласование</h3><p style="font-size: 14px; line-height: 1.6; color: #5B6577">Объясняем результат и стоимость.</p></div>
-<div style="display: flex; flex-direction: column; gap: 14px; padding-top: 24px; border-top: 2px solid #0B6BD8"><span class="mono" style="color: #0B6BD8">04</span><h3 style="font-size: 19px; font-weight: 700">Чистка</h3><p style="font-size: 14px; line-height: 1.6; color: #5B6577">Ультразвук, промывка, замена уплотнителей.</p></div>
-<div style="display: flex; flex-direction: column; gap: 14px; padding-top: 24px; border-top: 2px solid #0B6BD8"><span class="mono" style="color: #0B6BD8">05</span><h3 style="font-size: 19px; font-weight: 700">Тест и отчёт</h3><p style="font-size: 14px; line-height: 1.6; color: #5B6577">Повторный замер, фото и видео.</p></div>
+<div style="display: flex; flex-direction: column; gap: 14px; padding-top: 24px; border-top: 2px solid #0B6BD8"><span class="mono num" style="color: #0B6BD8">01</span><h3 style="font-size: 19px; font-weight: 700">Запись</h3><p style="font-size: 14px; line-height: 1.6; color: #5B6577">Модель авто и симптомы в WhatsApp.</p></div>
+<div style="display: flex; flex-direction: column; gap: 14px; padding-top: 24px; border-top: 2px solid #0B6BD8"><span class="mono num" style="color: #0B6BD8">02</span><h3 style="font-size: 19px; font-weight: 700">Снятие и проверка</h3><p style="font-size: 14px; line-height: 1.6; color: #5B6577">Замеры производительности и факела.</p></div>
+<div style="display: flex; flex-direction: column; gap: 14px; padding-top: 24px; border-top: 2px solid #0B6BD8"><span class="mono num" style="color: #0B6BD8">03</span><h3 style="font-size: 19px; font-weight: 700">Согласование</h3><p style="font-size: 14px; line-height: 1.6; color: #5B6577">Объясняем результат и стоимость.</p></div>
+<div style="display: flex; flex-direction: column; gap: 14px; padding-top: 24px; border-top: 2px solid #0B6BD8"><span class="mono num" style="color: #0B6BD8">04</span><h3 style="font-size: 19px; font-weight: 700">Чистка</h3><p style="font-size: 14px; line-height: 1.6; color: #5B6577">Ультразвук, промывка, замена уплотнителей.</p></div>
+<div style="display: flex; flex-direction: column; gap: 14px; padding-top: 24px; border-top: 2px solid #0B6BD8"><span class="mono num" style="color: #0B6BD8">05</span><h3 style="font-size: 19px; font-weight: 700">Тест и отчёт</h3><p style="font-size: 14px; line-height: 1.6; color: #5B6577">Повторный замер, фото и видео.</p></div>
 </div>
 <div class="split m2i" style="display: grid; grid-template-columns: minmax(0,2fr) minmax(0,1fr); gap: 24px">
 <div style="height: 460px; border-radius: 28px; overflow: hidden"><img alt="Цех автосервиса с автомобилем на подъёмнике" class="cover" decoding="async" loading="lazy" src="/img/35696b5e5c1ad6e0d1d56b1c6a9eefd4.jpg"/></div>
@@ -522,8 +526,8 @@ html{scroll-behavior:smooth}
 <div class="w" style="display: flex; flex-direction: column; gap: 48px">
 <div class="split" style="align-items: end">
 <div style="display: flex; flex-direction: column; gap: 18px">
-<div class="mono" style="color: #6FB9FF">До и после</div>
-<h2 class="h2">Разницу видно на факеле.</h2>
+
+<h2 class="h2">Разницу видно на факеле</h2>
 </div>
 <p style="font-size: 18px; line-height: 1.6; color: #AEB8C7; max-width: 560px">Загрязнённая форсунка льёт струями и каплями. После чистки распыл снова становится ровным мелкодисперсным конусом.</p>
 </div>
@@ -543,8 +547,8 @@ html{scroll-behavior:smooth}
 <section class="sec" id="report">
 <div class="w split" style="align-items: start">
 <div style="display: flex; flex-direction: column; gap: 22px">
-<div class="mono" style="color: #0B6BD8">Образец отчёта</div>
-<h2 class="h2">Что вы получите на руки.</h2>
+
+<h2 class="h2">Что вы получите на руки</h2>
 <p class="lead">После чистки присылаем отчёт в WhatsApp. Справа образец с условными цифрами, в вашем будут замеры ваших форсунок.</p>
 <div style="display: flex; flex-direction: column; gap: 14px"><div style="display: flex; gap: 12px; align-items: center; font-size: 16px"><svg aria-hidden="true" fill="none" height="20" stroke="#0B6BD8" stroke-linecap="round" stroke-width="2" style="flex: none" viewbox="0 0 24 24" width="20"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Замеры каждой форсунки до и после</div><div style="display: flex; gap: 12px; align-items: center; font-size: 16px"><svg aria-hidden="true" fill="none" height="20" stroke="#0B6BD8" stroke-linecap="round" stroke-width="2" style="flex: none" viewbox="0 0 24 24" width="20"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Видео факела распыла</div><div style="display: flex; gap: 12px; align-items: center; font-size: 16px"><svg aria-hidden="true" fill="none" height="20" stroke="#0B6BD8" stroke-linecap="round" stroke-width="2" style="flex: none" viewbox="0 0 24 24" width="20"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Список выполненных работ</div><div style="display: flex; gap: 12px; align-items: center; font-size: 16px"><svg aria-hidden="true" fill="none" height="20" stroke="#0B6BD8" stroke-linecap="round" stroke-width="2" style="flex: none" viewbox="0 0 24 24" width="20"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Вывод мастера простым языком</div></div>
 <a class="btn btn-p" href="https://wa.me/77474956165" style="align-self: flex-start; margin-top: 8px"><svg aria-hidden="true" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 21l2-5.5A8.4 8.4 0 1 1 21 11.5z"></path></svg>Записаться на чистку</a>
@@ -586,24 +590,24 @@ html{scroll-behavior:smooth}
 <div class="w" style="display: flex; flex-direction: column; gap: 48px">
 <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; flex-wrap: wrap">
 <div style="display: flex; flex-direction: column; gap: 18px; max-width: 640px">
-<div class="mono" style="color: #0B6BD8">Отзывы о чистке</div>
-<h2 class="h2">Что говорят после чистки.</h2>
+
+<h2 class="h2">Отзывы о чистке форсунок</h2>
 </div>
 <a class="btn btn-l" href="https://2gis.kz/almaty/firm/70000001104923219/tab/reviews">Все отзывы об Аносова 91 в 2ГИС<svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M7 17L17 7M9 7h8v8"></path></svg></a>
 </div>
 <div class="g3 mcar mcar-rv">
 <figure class="card" style="margin: 0; padding: 28px; display: flex; flex-direction: column; gap: 18px">
-<div style="display: flex; justify-content: space-between; align-items: center; gap: 12px"><svg aria-hidden="true" fill="#F59E0B" height="15" viewbox="0 0 120 23" width="80"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8-5.1-4.7 6.9-.8z" transform="translate(0 0)"></path><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8-5.1-4.7 6.9-.8z" transform="translate(24 0)"></path><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8-5.1-4.7 6.9-.8z" transform="translate(48 0)"></path><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8-5.1-4.7 6.9-.8z" transform="translate(72 0)"></path><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8-5.1-4.7 6.9-.8z" transform="translate(96 0)"></path></svg><span class="mono" style="font-size: 10px; color: #5B6577">2ГИС · 22.05.2026</span></div>
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 12px"><svg aria-hidden="true" fill="#F59E0B" height="15" viewbox="0 0 120 23" width="80"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8-5.1-4.7 6.9-.8z" transform="translate(0 0)"></path><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8-5.1-4.7 6.9-.8z" transform="translate(24 0)"></path><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8-5.1-4.7 6.9-.8z" transform="translate(48 0)"></path><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8-5.1-4.7 6.9-.8z" transform="translate(72 0)"></path><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8-5.1-4.7 6.9-.8z" transform="translate(96 0)"></path></svg><span class="mono num" style="font-size: 10px; color: #5B6577">2ГИС · 22.05.2026</span></div>
 <blockquote style="margin: 0; font-size: 17px; line-height: 1.55; font-weight: 600; letter-spacing: -.005em">«Форсунки почистил Сергей, молодец: машина перестала дёргаться и тупить. Спасибо!»</blockquote>
 <figcaption style="margin-top: auto; padding-top: 18px; border-top: 1px solid #E3E8EF; display: flex; align-items: center; gap: 12px"><span style="width: 38px; height: 38px; border-radius: 50%; background: #E8F2FE; color: #0B6BD8; display: inline-flex; align-items: center; justify-content: center; font-weight: 800; font-size: 15px; flex: none">S</span><span style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 700">SUNQAR KZ</span><span style="font-size: 13px; color: #5B6577">Автосервис, Аносова 91</span></span></figcaption>
 </figure>
 <figure class="card" style="margin: 0; padding: 28px; display: flex; flex-direction: column; gap: 18px">
-<div style="display: flex; justify-content: space-between; align-items: center; gap: 12px"><svg aria-hidden="true" fill="#F59E0B" height="15" viewbox="0 0 120 23" width="80"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8-5.1-4.7 6.9-.8z" transform="translate(0 0)"></path><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8-5.1-4.7 6.9-.8z" transform="translate(24 0)"></path><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8-5.1-4.7 6.9-.8z" transform="translate(48 0)"></path><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8-5.1-4.7 6.9-.8z" transform="translate(72 0)"></path><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8-5.1-4.7 6.9-.8z" transform="translate(96 0)"></path></svg><span class="mono" style="font-size: 10px; color: #5B6577">2ГИС · 15.09.2025</span></div>
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 12px"><svg aria-hidden="true" fill="#F59E0B" height="15" viewbox="0 0 120 23" width="80"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8-5.1-4.7 6.9-.8z" transform="translate(0 0)"></path><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8-5.1-4.7 6.9-.8z" transform="translate(24 0)"></path><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8-5.1-4.7 6.9-.8z" transform="translate(48 0)"></path><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8-5.1-4.7 6.9-.8z" transform="translate(72 0)"></path><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8-5.1-4.7 6.9-.8z" transform="translate(96 0)"></path></svg><span class="mono num" style="font-size: 10px; color: #5B6577">2ГИС · 15.09.2025</span></div>
 <blockquote style="margin: 0; font-size: 17px; line-height: 1.55; font-weight: 600; letter-spacing: -.005em">«Аккуратно сняли, почистили и заменили расходники в форсунках. Проверили на стенде и всё объяснили. Спасибо мастеру Максиму.»</blockquote>
 <figcaption style="margin-top: auto; padding-top: 18px; border-top: 1px solid #E3E8EF; display: flex; align-items: center; gap: 12px"><span style="width: 38px; height: 38px; border-radius: 50%; background: #E8F2FE; color: #0B6BD8; display: inline-flex; align-items: center; justify-content: center; font-weight: 800; font-size: 15px; flex: none">O</span><span style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 700">Only Black</span><span style="font-size: 13px; color: #5B6577">Автосервис, Аносова 91</span></span></figcaption>
 </figure>
 <figure class="card" style="margin: 0; padding: 28px; display: flex; flex-direction: column; gap: 18px">
-<div style="display: flex; justify-content: space-between; align-items: center; gap: 12px"><svg aria-hidden="true" fill="#F59E0B" height="15" viewbox="0 0 120 23" width="80"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8-5.1-4.7 6.9-.8z" transform="translate(0 0)"></path><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8-5.1-4.7 6.9-.8z" transform="translate(24 0)"></path><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8-5.1-4.7 6.9-.8z" transform="translate(48 0)"></path><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8-5.1-4.7 6.9-.8z" transform="translate(72 0)"></path><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8-5.1-4.7 6.9-.8z" transform="translate(96 0)"></path></svg><span class="mono" style="font-size: 10px; color: #5B6577">2ГИС · 06.09.2024</span></div>
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 12px"><svg aria-hidden="true" fill="#F59E0B" height="15" viewbox="0 0 120 23" width="80"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8-5.1-4.7 6.9-.8z" transform="translate(0 0)"></path><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8-5.1-4.7 6.9-.8z" transform="translate(24 0)"></path><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8-5.1-4.7 6.9-.8z" transform="translate(48 0)"></path><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8-5.1-4.7 6.9-.8z" transform="translate(72 0)"></path><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8-5.1-4.7 6.9-.8z" transform="translate(96 0)"></path></svg><span class="mono num" style="font-size: 10px; color: #5B6577">2ГИС · 06.09.2024</span></div>
 <blockquote style="margin: 0; font-size: 17px; line-height: 1.55; font-weight: 600; letter-spacing: -.005em">«Почистили форсунки и решили проблему на GDI! Многие СТО не берутся или делают хуже. Здесь показали проблему и как всё должно работать.»</blockquote>
 <figcaption style="margin-top: auto; padding-top: 18px; border-top: 1px solid #E3E8EF; display: flex; align-items: center; gap: 12px"><span style="width: 38px; height: 38px; border-radius: 50%; background: #E8F2FE; color: #0B6BD8; display: inline-flex; align-items: center; justify-content: center; font-weight: 800; font-size: 15px; flex: none">Р</span><span style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 700">Руслан М.</span><span style="font-size: 13px; color: #5B6577">Автосервис, Аносова 91</span></span></figcaption>
 </figure>
@@ -614,8 +618,8 @@ html{scroll-behavior:smooth}
 <section class="sec" style="background: #F3F5F8">
 <div class="w split">
 <div style="display: flex; flex-direction: column; gap: 18px">
-<div class="mono" style="color: #0B6BD8">Вопросы</div>
-<h2 class="h2">О чистке форсунок.</h2>
+
+<h2 class="h2">Вопросы о чистке форсунок</h2>
 </div>
 <div>
 <details open="">
@@ -639,7 +643,7 @@ html{scroll-behavior:smooth}
 </section>
 <section class="sec">
 <div class="w" style="display: flex; flex-direction: column; gap: 48px">
-<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap"><h2 class="h2">Часто заказывают вместе.</h2><a class="btn btn-l" href="/ru/services/">Все услуги</a></div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap"><h2 class="h2">Часто заказывают вместе</h2><a class="btn btn-l" href="/ru/services/">Все услуги</a></div>
 <div class="g3 mcar mcar-art">
 <a class="card" href="/ru/services/walnut-valve-cleaning/" style="overflow: hidden; color: #0B1220; display: flex; flex-direction: column">
 <div style="height: 240px"><img alt="Чистка впускных клапанов ореховым абразивом" class="cover" decoding="async" loading="lazy" src="/img/70326ae47897d29e42c7abc787979123.jpg"/></div>
@@ -660,7 +664,7 @@ html{scroll-behavior:smooth}
 <div class="w">
 <div class="split" style="border-radius: 32px; background: #0B1220; color: #FFFFFF; padding: 72px; display: grid; grid-template-columns: minmax(0,1.3fr) minmax(0,1fr); gap: 48px; align-items: center">
 <div style="display: flex; flex-direction: column; gap: 20px">
-<h2 class="h2">Обсудим вашу задачу.</h2>
+<h2 class="h2">Записаться на проверку</h2>
 <p style="font-size: 18px; line-height: 1.6; color: #AEB8C7; max-width: 520px">Напишите модель автомобиля и что вас беспокоит. Подскажем, с чего начать.</p>
 </div>
 <div style="display: flex; flex-direction: column; gap: 14px">
@@ -756,22 +760,11 @@ d.querySelectorAll('.mcar').forEach(function(c){var k=c.children.length;if(k<2)r
 d.querySelectorAll('.pk-btn').forEach(function(b){b.addEventListener('click',function(){var r=d.querySelector('[aria-live]');if(!r||rm)return;r.classList.add('pk-swap');requestAnimationFrame(function(){requestAnimationFrame(function(){r.classList.remove('pk-swap')})})},true)});
 if(rm||!('IntersectionObserver' in window))return;
 de.classList.add('js-anim');
-// reveal on scroll
-var sel='section .h2, section .lead, section h2, section .card, section figure, section details, section .prow, .mcar, .mlist>*, .msteps>*, .m2>*, .mstats>*, section .g2>*, section .g3>*, section .g4>*, footer .g4>*';
-var els=[].slice.call(d.querySelectorAll(sel)).filter(function(e){return !e.closest('.m-hero,.hero,.mmenu,.fbar')&&!e.parentElement.closest('.rv,.mcar,.mfacts')});
-var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
-els.forEach(function(e){var p=e.parentElement,i=[].indexOf.call(p.children,e);e.style.transitionDelay=(Math.min(i,5)*70)+'ms';e.classList.add('rv');io.observe(e)});
 // report bars grow
 var bars=[].slice.call(d.querySelectorAll('div[style*="height: 10px"]>div[style*="width:"]'));
 bars.forEach(function(b){b.dataset.bar=b.style.width;b.style.width='0'});
 var bo=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.style.width=e.target.dataset.bar;bo.unobserve(e.target)}})},{threshold:.4});
 bars.forEach(function(b){bo.observe(b)});
-// count-up numbers
-function fmt(v,dec){var s=v.toFixed(dec).replace('.',',');return s.replace(/\B(?=(\d{3})+(?!\d))/g,' ')}
-var cs=[].slice.call(d.querySelectorAll('.mstats>div>div:first-child, .g4[style*="border-bottom: 1px solid #E3E8EF"]>div>div:first-child, .m-hero-rate>div>span:first-child'));
-cs.forEach(function(el){var tn=el.firstChild;if(!tn||tn.nodeType!==3)return;var raw=tn.nodeValue.trim(),num=parseFloat(raw.replace(/[\s ]/g,'').replace(',','.'));
- if(isNaN(num)||(num>1900&&num<2100&&raw.length===4))return;var dec=(raw.split(',')[1]||'').length,co=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;co.disconnect();
- var t0=performance.now();(function f(t){var p=Math.min(1,(t-t0)/1300),e=1-Math.pow(1-p,3);tn.nodeValue=fmt(num*e,dec);if(p<1)requestAnimationFrame(f);else tn.nodeValue=raw})(t0)},{threshold:.5});co.observe(el)});
 })();
 </script>
 </body>

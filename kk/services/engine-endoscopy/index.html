@@ -103,6 +103,16 @@ img.cover{height:100%}
 div.card:hover{border-color:#E3E8EF;transform:none;box-shadow:none}
 @media (hover:none){.card:hover{transform:none !important;box-shadow:none !important}}
 html{scroll-behavior:smooth}
+
+/* plain captions instead of tracked mono caps; mono stays for numbers and dates */
+.mono:not(.num):not(#_){font-family:'Manrope',system-ui,sans-serif !important;text-transform:none !important;letter-spacing:0 !important;font-size:13px !important;font-weight:600}
+.mono.num{letter-spacing:.04em}
+.mm-cap,.mm-places small{font-family:'Manrope',system-ui,sans-serif !important;text-transform:none !important;letter-spacing:0 !important;font-size:12px !important;font-weight:600}
+[style*="border-radius: 32px"],[style*="border-radius: 28px"]{border-radius:20px !important}
+[style*="border-radius: 24px"],[style*="border-radius: 22px"]{border-radius:16px !important}
+.card{border-radius:16px}
+@media (min-width:1101px){h1.h1[style*="font-size: 96px"]{font-size:76px !important;line-height:1 !important}}
+span[style*="width: 44px; height: 44px; border-radius: 12px"]{background:none !important;width:auto !important;height:auto !important;justify-content:flex-start !important;color:#0B6BD8}
 @media (max-width:760px){
  footer{padding-bottom:calc(92px + env(safe-area-inset-bottom)) !important}
  html.mlock{overflow:hidden}
@@ -143,13 +153,11 @@ html{scroll-behavior:smooth}
  .mbtn:active{transform:scale(.97)}
  .mbtn-wa{background:#25D366;color:#06210F}.mbtn-wa:hover{color:#06210F}
  .mbtn-g{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);color:#FFFFFF}.mbtn-g:hover{color:#FFFFFF}
- .fbar{display:flex;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:80;padding:10px 12px calc(10px + env(safe-area-inset-bottom));border-radius:22px 22px 0 0;background:#0B1220;border-top:1px solid rgba(255,255,255,.08);box-shadow:0 -10px 30px rgba(7,12,22,.22);animation:barIn .6s .5s cubic-bezier(.2,.7,.2,1) both;transition:transform .35s,opacity .35s}
+ .fbar{display:flex;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:80;padding:10px 12px calc(10px + env(safe-area-inset-bottom));border-radius:16px 22px 0 0;background:#0B1220;border-top:1px solid rgba(255,255,255,.08);box-shadow:0 -10px 30px rgba(7,12,22,.22);animation:barIn .6s .5s cubic-bezier(.2,.7,.2,1) both;transition:transform .35s,opacity .35s}
  .fbar.hide{transform:translateY(110%)}
  .fbar .mbtn-wa{flex:1;height:50px}
  .fbar-call{width:50px;height:50px;padding:0;background:rgba(255,255,255,.1);color:#FFFFFF}.fbar-call:hover{color:#FFFFFF}
  .wa-ic{position:relative;display:inline-flex}
- .wa-ic::after{content:"";position:absolute;inset:-6px;border-radius:50%;border:2px solid rgba(6,33,15,.45);animation:ring 2.8s 1.5s ease-out infinite}
- @keyframes ring{0%{transform:scale(.6);opacity:1}70%,100%{transform:scale(1.5);opacity:0}}
  @keyframes barIn{from{transform:translateY(110%)}to{transform:none}}
 
  /* typography & rhythm */
@@ -184,7 +192,7 @@ html{scroll-behavior:smooth}
  [style^="height: 460px"],[style*="; height: 460px"],[style^="height: 400px"],[style*="; height: 400px"],[style^="height: 360px"],[style*="; height: 360px"]{height:220px !important}
  [style^="height: 280px"],[style*="; height: 280px"],[style^="height: 260px"],[style*="; height: 260px"]{height:180px !important}
  [style*="min-height: 420px"],[style*="min-height: 340px"]{min-height:0 !important}
- .card{border-radius:20px !important}
+ .card{border-radius:16px !important}
  summary{font-size:16px !important;padding:16px 0 !important;gap:14px !important;line-height:1.3}
  details p,details>div{font-size:15px !important}
  div[style*="justify-content: space-between; align-items: flex-end"]{flex-direction:column;align-items:flex-start !important;gap:12px !important}
@@ -206,14 +214,14 @@ html{scroll-behavior:smooth}
  .m-hero-col>.mono>span{display:none}
  .m-hero-col>h1{order:2;font-size:38px !important;line-height:1.02 !important}
  .m-hero-col>p:not(.m-hero-note){order:3;font-size:15px !important}
- .m-hero-img{order:4;height:210px !important;border-radius:22px !important}
+ .m-hero-img{order:4;height:210px !important;border-radius:16px !important}
  .m-hero-img>div{padding:8px 12px !important;border-radius:14px !important}
  .m-hero-img>div[style*="top: 24px"]{top:12px !important;right:auto !important;left:12px !important}
  .m-hero-img>div[style*="bottom: 24px"]{left:12px !important;bottom:12px !important}
  .m-hero-img>div span[style*="font-size: 13px"]{display:none !important}
  .m-hero-img>div>span[style*="width: 40px"]{width:28px !important;height:28px !important;border-radius:8px !important}
  .m-hero-cta{order:5;display:grid !important;grid-template-columns:1fr 1fr;gap:10px !important}
- .m-hero-cta .btn{flex-direction:column;align-items:flex-start !important;justify-content:flex-start !important;text-align:left !important;min-height:112px !important;border-radius:18px !important;padding:14px !important;gap:10px;font-size:15px !important;line-height:1.2 !important;width:auto !important}
+ .m-hero-cta .btn{flex-direction:column;align-items:flex-start !important;justify-content:flex-start !important;text-align:left !important;min-height:112px !important;border-radius:14px !important;padding:14px !important;gap:10px;font-size:15px !important;line-height:1.2 !important;width:auto !important}
  .m-hero-cta .btn>svg{display:none}
  .m-hero-cta .btn::after{content:attr(data-sub);font-size:12px;font-weight:600;opacity:.7;margin-top:auto}
  .m-ic{display:inline-flex;width:34px;height:34px;border-radius:10px;align-items:center;justify-content:center;background:rgba(255,255,255,.16)}
@@ -239,7 +247,7 @@ html{scroll-behavior:smooth}
  .m-shero div[style*="grid-template-columns: repeat(3"]>div:first-child{padding-left:0 !important}
  .m-shero div[style*="grid-template-columns: repeat(3"] span[style*="font-size: 24px"]{font-size:17px !important}
  .m-shero div[style*="grid-template-columns: repeat(3"] span[style*="font-size: 13px"]{font-size:11px !important}
- .m-shero>div:last-child{height:220px !important;border-radius:22px !important}
+ .m-shero>div:last-child{height:220px !important;border-radius:16px !important}
 
  /* picker */
  .m-picker{padding:48px 0 !important}
@@ -248,7 +256,7 @@ html{scroll-behavior:smooth}
  .pk-btn{min-height:38px !important;padding:8px 14px !important;border-radius:999px !important;font-size:14px !important;background:#FFFFFF !important;border:1px solid #D7DEE8 !important;line-height:1.2 !important;transition:background .2s,color .2s,transform .15s}
  .pk-btn:active{transform:scale(.95)}
  .pk-btn[aria-pressed="true"]{background:#0B1220 !important;color:#FFFFFF !important;border-color:#0B1220 !important}
- .m-picker [aria-live]{padding:20px !important;border-radius:22px !important;gap:10px !important}
+ .m-picker [aria-live]{padding:20px !important;border-radius:16px !important;gap:10px !important}
  .m-picker #pk-title{font-size:21px !important}
  .m-picker #pk-why{font-size:14px !important}
  .m-picker [aria-live] .btn{min-height:44px !important;font-size:14px !important;border-radius:14px}
@@ -263,26 +271,26 @@ html{scroll-behavior:smooth}
  .mdots i{width:6px;height:6px;border-radius:3px;background:#CFD6E1;display:block;transition:width .3s,background .3s}
  .mdots i.on{width:18px;background:#0B6BD8}
  .mdots-d i{background:rgba(255,255,255,.2)}.mdots-d i.on{background:#0290FE}
- .mcar-fc>.fc{display:block !important;position:relative;width:286px;height:340px;min-height:0 !important;border:0 !important;border-radius:22px !important}
+ .mcar-fc>.fc{display:block !important;position:relative;width:286px;height:340px;min-height:0 !important;border:0 !important;border-radius:16px !important}
  .mcar-fc>.fc>div:last-child{position:absolute !important;inset:0;min-height:0 !important}
  .mcar-fc>.fc>div:first-child{position:absolute;left:0;right:0;bottom:0;z-index:1;padding:80px 18px 18px !important;gap:6px !important;background:linear-gradient(180deg,rgba(7,12,22,0),rgba(7,12,22,.92) 45%)}
  .mcar-fc>.fc *{color:#FFFFFF !important}
  .mcar-fc>.fc .mono{color:#9FD2FF !important;font-size:10px !important}
  .mcar-fc>.fc p{font-size:13px !important;color:#C9D2DF !important}
  .mcar-fc>.fc h3{font-size:21px !important}
- .mcar-pic>div{width:286px;height:220px !important;border-radius:22px !important;position:relative}
+ .mcar-pic>div{width:286px;height:220px !important;border-radius:16px !important;position:relative}
  .mcar-pic>div::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(7,12,22,0) 45%,rgba(7,12,22,.85));pointer-events:none}
  .mcar-pic>div>div{z-index:2;left:16px !important;right:16px !important;bottom:14px !important}
  .mcar-pic>div span[style*="font-size: 28px"]{font-size:17px !important}
  .mcar-pic>div[style*="background: #0B1220"]{padding:20px !important}
- .mcar-place>div{min-height:0 !important;width:318px;padding:20px !important;gap:14px !important;border-radius:22px !important}
+ .mcar-place>div{min-height:0 !important;width:318px;padding:20px !important;gap:14px !important;border-radius:16px !important}
  .mcar-place>div p{font-size:14px !important}
  .mcar-place .g2{gap:10px 14px !important;font-size:13px !important}
  .mcar-place .btn{width:100% !important;align-self:stretch !important;min-height:46px !important;border-radius:14px}
  .mcar-rv>figure{width:300px;padding:18px !important;gap:12px !important}
  .mcar-rv blockquote{font-size:15px !important}
  .mcar-art>a{width:252px;gap:10px !important}
- .mcar-art>a>div:first-child{border-radius:18px !important}
+ .mcar-art>a>div:first-child{border-radius:14px !important}
  .mcar-art>a>div:first-child{height:136px !important}
  .mcar-art>a>div:last-child{padding:14px !important;gap:6px !important}
  .mcar-art h3{font-size:15px !important;line-height:1.3 !important}
@@ -296,18 +304,18 @@ html{scroll-behavior:smooth}
  .mhcard p{font-size:13px !important;line-height:1.4 !important;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
  .mhcard .mono{font-size:9px !important}
  .mhcard>a>div:last-child>span:last-child:not(.mono){display:none !important}
- .m-svc-help{display:flex !important;flex-direction:row !important;align-items:center;gap:14px !important;min-height:0 !important;padding:16px !important;margin-top:12px;border-radius:20px !important}
+ .m-svc-help{display:flex !important;flex-direction:row !important;align-items:center;gap:14px !important;min-height:0 !important;padding:16px !important;margin-top:12px;border-radius:16px !important}
  .m-svc-help h3{font-size:15px !important}.m-svc-help p{font-size:13px !important}
  /* lists */
- .mlist{display:flex !important;flex-direction:column;gap:0 !important;border:1px solid #E3E8EF;border-radius:20px;background:#FFFFFF;overflow:hidden}
- .mlist>*{display:grid !important;grid-template-columns:40px 1fr 16px;grid-template-rows:auto auto;column-gap:14px;row-gap:2px !important;align-items:center;padding:14px 16px !important;min-height:0 !important;border:0 !important;border-top:1px solid #EEF1F5 !important;border-radius:0 !important;background:#FFFFFF !important;position:relative}
+ .mlist{display:flex !important;flex-direction:column;gap:0 !important;border:1px solid #E3E8EF;border-radius:16px;background:#FFFFFF;overflow:hidden}
+ .mlist>*{display:grid !important;grid-template-columns:28px 1fr 16px;grid-template-rows:auto auto;column-gap:14px;row-gap:2px !important;align-items:center;padding:14px 16px !important;min-height:0 !important;border:0 !important;border-top:1px solid #EEF1F5 !important;border-radius:0 !important;background:#FFFFFF !important;position:relative}
  .mlist>*:first-child{border-top:0 !important}
- .mlist>*>svg,.mlist>*>span:first-child{grid-row:1/3;width:40px !important;height:40px !important;border-radius:12px !important;background:#EEF5FF !important;display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box}
- .mlist>*>svg{padding:10px}
+ .mlist>*>svg,.mlist>*>span:first-child{grid-row:1/3;width:28px !important;height:28px !important;border-radius:0 !important;background:none !important;color:#0B6BD8;display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box}
+ .mlist>*>svg{padding:2px}
  .mlist h3{font-size:15px !important;line-height:1.25 !important;grid-column:2;align-self:end}
  .mlist p{font-size:13px !important;line-height:1.35 !important;grid-column:2;align-self:start}
  .mlist-svc>a::after{content:"";grid-column:3;grid-row:1/3;width:8px;height:8px;border-right:2px solid #9AA4B2;border-top:2px solid #9AA4B2;transform:rotate(45deg)}
- .mlist-plain>*{grid-template-columns:40px 1fr}
+ .mlist-plain>*{grid-template-columns:28px 1fr}
  /* tiles, stats, steps */
  .m2{grid-template-columns:1fr 1fr !important;gap:8px !important}
  .m2>*{padding:14px !important;gap:6px !important;border-radius:16px !important}
@@ -342,13 +350,9 @@ html{scroll-behavior:smooth}
 }
 /* motion: everywhere, only when allowed */
 @media (prefers-reduced-motion:no-preference){
- .js-anim .rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
- .js-anim .rv.in{opacity:1;transform:none}
  body>div:first-of-type h1,body>div:first-of-type h1+p,body>div:first-of-type .mono,.mstatus,.m-hero-cta,.m-hero-rate{animation:heroIn .8s cubic-bezier(.2,.7,.2,1) both}
  body>div:first-of-type h1{animation-delay:.08s}body>div:first-of-type h1+p{animation-delay:.18s}.m-hero-cta{animation-delay:.32s}.m-hero-rate{animation-delay:.42s}
  @keyframes heroIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
- .hero-grid>div:last-child img,.hero>div:last-child img{animation:kb 18s ease-in-out infinite alternate;transform-origin:50% 70%}
- @keyframes kb{from{transform:scale(1)}to{transform:scale(1.08)}}
  .card,.btn{transition:transform .2s,border-color .2s,background .2s,box-shadow .2s}
  .btn:active{transform:scale(.97)}
  a.card:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(11,18,32,.08)}
@@ -373,7 +377,7 @@ html{scroll-behavior:smooth}
  .sec[style*="padding-top: 0"]{padding-top:0 !important}
  .m-svc-help+*{margin-top:16px !important}
  div[style*="flex-wrap: wrap"]>div[style*="padding: 16px 22px 16px 18px"]{flex:1 1 100%}
- .hf{border-radius:26px !important}
+ .hf{border-radius:20px !important}
  .hf>div:first-child{padding:28px 22px !important;gap:16px !important}
  .hf .hf-media{min-height:0 !important;height:auto;display:flex;flex-direction:column;justify-content:flex-end;aspect-ratio:auto;padding:220px 12px 12px}
  .hf .hf-media>img{height:100% !important}
@@ -420,8 +424,8 @@ html{scroll-behavior:smooth}
 <section class="sec" id="price" style="background: #F3F5F8">
 <div class="w split" style="align-items: start">
 <div style="display: flex; flex-direction: column; gap: 18px">
-<div class="mono" style="color: #0B6BD8">Бағасы</div>
-<h2 class="h2">Қозғалтқыш эндоскопиясы қанша тұрады.</h2>
+
+<h2 class="h2">Қозғалтқыш эндоскопиясы қанша тұрады</h2>
 <p class="lead">Төрт цилиндрлі қозғалтқыш үшін эндоскопия 8 000 ₸-ден басталады.</p>
 <p class="mono" style="font-size: 11px; line-height: 1.7; color: #5B6577; letter-spacing: .08em">Бағалар 20.10.2026 жағдайы бойынша. Қорытынды бағаны жұмыс басталғанға дейін келісеміз.</p>
 </div>
@@ -438,40 +442,40 @@ html{scroll-behavior:smooth}
 <div class="w" style="display: flex; flex-direction: column; gap: 56px">
 <div class="split" style="align-items: end">
 <div style="display: flex; flex-direction: column; gap: 18px">
-<div class="mono" style="color: #0B6BD8">Қашан хабарласу керек</div>
-<h2 class="h2">Бізге осындай белгілермен келеді.</h2>
+
+<h2 class="h2">Қашан келген жөн</h2>
 </div>
 <p class="lead" style="max-width: 560px">Ұқсас белгілер басқа себептерден де болады. Сондықтан алдымен тексереміз, содан кейін жөндеуді ұсынамыз.</p>
 </div>
 <div class="g3 m2">
-<div class="card" style="padding: 32px; display: flex; flex-direction: column; gap: 14px"><span class="mono" style="color: #0B6BD8">01</span><h3 style="font-size: 21px; font-weight: 700">Көлік сатып алар алдында</h3><p style="font-size: 15px; line-height: 1.6; color: #5B6577">Мәміле алдында қозғалтқыштың жағдайын көру.</p></div>
-<div class="card" style="padding: 32px; display: flex; flex-direction: column; gap: 14px"><span class="mono" style="color: #0B6BD8">02</span><h3 style="font-size: 21px; font-weight: 700">Төмен компрессия</h3><p style="font-size: 15px; line-height: 1.6; color: #5B6577">Цилиндрде нақты не дұрыс емес екенін түсіну.</p></div>
-<div class="card" style="padding: 32px; display: flex; flex-direction: column; gap: 14px"><span class="mono" style="color: #0B6BD8">03</span><h3 style="font-size: 21px; font-weight: 700">Май шығыны</h3><p style="font-size: 15px; line-height: 1.6; color: #5B6577">Цилиндр қабырғалары мен поршеньдерді тексеру.</p></div>
-<div class="card" style="padding: 32px; display: flex; flex-direction: column; gap: 14px"><span class="mono" style="color: #0B6BD8">04</span><h3 style="font-size: 21px; font-weight: 700">Қызып кеткеннен кейін</h3><p style="font-size: 15px; line-height: 1.6; color: #5B6577">Газ өтуінің іздері мен жырылуларды қарау.</p></div>
-<div class="card" style="padding: 32px; display: flex; flex-direction: column; gap: 14px"><span class="mono" style="color: #0B6BD8">05</span><h3 style="font-size: 21px; font-weight: 700">GDI-дағы күйе</h3><p style="font-size: 15px; line-height: 1.6; color: #5B6577">Поршеньдер мен клапандардағы шөгінділерді бағалау.</p></div>
-<div class="card" style="padding: 32px; display: flex; flex-direction: column; gap: 14px"><span class="mono" style="color: #0B6BD8">06</span><h3 style="font-size: 21px; font-weight: 700">Бөгде тықыл</h3><p style="font-size: 15px; line-height: 1.6; color: #5B6577">Жану камерасындағы зақымды жоққа шығару.</p></div>
+<div class="card" style="padding: 32px; display: flex; flex-direction: column; gap: 14px"><h3 style="font-size: 21px; font-weight: 700">Көлік сатып алар алдында</h3><p style="font-size: 15px; line-height: 1.6; color: #5B6577">Мәміле алдында қозғалтқыштың жағдайын көру.</p></div>
+<div class="card" style="padding: 32px; display: flex; flex-direction: column; gap: 14px"><h3 style="font-size: 21px; font-weight: 700">Төмен компрессия</h3><p style="font-size: 15px; line-height: 1.6; color: #5B6577">Цилиндрде нақты не дұрыс емес екенін түсіну.</p></div>
+<div class="card" style="padding: 32px; display: flex; flex-direction: column; gap: 14px"><h3 style="font-size: 21px; font-weight: 700">Май шығыны</h3><p style="font-size: 15px; line-height: 1.6; color: #5B6577">Цилиндр қабырғалары мен поршеньдерді тексеру.</p></div>
+<div class="card" style="padding: 32px; display: flex; flex-direction: column; gap: 14px"><h3 style="font-size: 21px; font-weight: 700">Қызып кеткеннен кейін</h3><p style="font-size: 15px; line-height: 1.6; color: #5B6577">Газ өтуінің іздері мен жырылуларды қарау.</p></div>
+<div class="card" style="padding: 32px; display: flex; flex-direction: column; gap: 14px"><h3 style="font-size: 21px; font-weight: 700">GDI-дағы күйе</h3><p style="font-size: 15px; line-height: 1.6; color: #5B6577">Поршеньдер мен клапандардағы шөгінділерді бағалау.</p></div>
+<div class="card" style="padding: 32px; display: flex; flex-direction: column; gap: 14px"><h3 style="font-size: 21px; font-weight: 700">Бөгде тықыл</h3><p style="font-size: 15px; line-height: 1.6; color: #5B6577">Жану камерасындағы зақымды жоққа шығару.</p></div>
 </div>
 </div>
 </section>
 <section class="sec" style="background: #0B1220; color: #FFFFFF">
 <div class="w" style="display: flex; flex-direction: column; gap: 56px">
 <div style="display: flex; flex-direction: column; gap: 18px; max-width: 760px">
-<div class="mono" style="color: #6FB9FF">Жұмыс қалай өтеді</div>
-<h2 class="h2">Төрт қадам, әрқайсысын өз көзіңізбен көресіз.</h2>
+
+<h2 class="h2">Жұмыс қалай өтеді</h2>
 </div>
 <div class="g4 msteps msteps-d">
-<div style="display: flex; flex-direction: column; gap: 14px; padding-top: 24px; border-top: 2px solid #0290FE"><span class="mono" style="color: #6FB9FF">01</span><h3 style="font-size: 20px; font-weight: 700">Дайындық</h3><p style="font-size: 15px; line-height: 1.6; color: #AEB8C7">Катушкалар мен оталдыру шамдарын шешеміз.</p></div>
-<div style="display: flex; flex-direction: column; gap: 14px; padding-top: 24px; border-top: 2px solid #0290FE"><span class="mono" style="color: #6FB9FF">02</span><h3 style="font-size: 20px; font-weight: 700">Қарап шығу</h3><p style="font-size: 15px; line-height: 1.6; color: #AEB8C7">Камераны әр цилиндрге енгізіп, білікті бұраймыз.</p></div>
-<div style="display: flex; flex-direction: column; gap: 14px; padding-top: 24px; border-top: 2px solid #0290FE"><span class="mono" style="color: #6FB9FF">03</span><h3 style="font-size: 20px; font-weight: 700">Жазылу</h3><p style="font-size: 15px; line-height: 1.6; color: #AEB8C7">Көргенімізді фото және бейнеге сақтаймыз.</p></div>
-<div style="display: flex; flex-direction: column; gap: 14px; padding-top: 24px; border-top: 2px solid #0290FE"><span class="mono" style="color: #6FB9FF">04</span><h3 style="font-size: 20px; font-weight: 700">Түсіндіру</h3><p style="font-size: 15px; line-height: 1.6; color: #AEB8C7">Жазбаны көрсетіп, нені білдіретінін айтамыз.</p></div>
+<div style="display: flex; flex-direction: column; gap: 14px; padding-top: 24px; border-top: 2px solid #0290FE"><span class="mono num" style="color: #6FB9FF">01</span><h3 style="font-size: 20px; font-weight: 700">Дайындық</h3><p style="font-size: 15px; line-height: 1.6; color: #AEB8C7">Катушкалар мен оталдыру шамдарын шешеміз.</p></div>
+<div style="display: flex; flex-direction: column; gap: 14px; padding-top: 24px; border-top: 2px solid #0290FE"><span class="mono num" style="color: #6FB9FF">02</span><h3 style="font-size: 20px; font-weight: 700">Қарап шығу</h3><p style="font-size: 15px; line-height: 1.6; color: #AEB8C7">Камераны әр цилиндрге енгізіп, білікті бұраймыз.</p></div>
+<div style="display: flex; flex-direction: column; gap: 14px; padding-top: 24px; border-top: 2px solid #0290FE"><span class="mono num" style="color: #6FB9FF">03</span><h3 style="font-size: 20px; font-weight: 700">Жазылу</h3><p style="font-size: 15px; line-height: 1.6; color: #AEB8C7">Көргенімізді фото және бейнеге сақтаймыз.</p></div>
+<div style="display: flex; flex-direction: column; gap: 14px; padding-top: 24px; border-top: 2px solid #0290FE"><span class="mono num" style="color: #6FB9FF">04</span><h3 style="font-size: 20px; font-weight: 700">Түсіндіру</h3><p style="font-size: 15px; line-height: 1.6; color: #AEB8C7">Жазбаны көрсетіп, нені білдіретінін айтамыз.</p></div>
 </div>
 </div>
 </section>
 <section class="sec" style="background: #F3F5F8">
 <div class="w split">
 <div style="display: flex; flex-direction: column; gap: 18px">
-<div class="mono" style="color: #0B6BD8">Сұрақтар</div>
-<h2 class="h2">Ең бастысы қысқаша.</h2>
+
+<h2 class="h2">Жиі қойылатын сұрақтар</h2>
 </div>
 <div>
 <details open="">
@@ -496,7 +500,7 @@ html{scroll-behavior:smooth}
 <section class="sec">
 <div class="w" style="display: flex; flex-direction: column; gap: 48px">
 <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap">
-<h2 class="h2">Тағы не қарауға болады.</h2>
+<h2 class="h2">Ұқсас қызметтер</h2>
 <a class="btn btn-l" href="/kk/services/">Барлық қызметтер</a>
 </div>
 <div class="g3 mcar mcar-art">
@@ -519,7 +523,7 @@ html{scroll-behavior:smooth}
 <div class="w">
 <div class="split" style="border-radius: 32px; background: #0B1220; color: #FFFFFF; padding: 72px; display: grid; grid-template-columns: minmax(0,1.3fr) minmax(0,1fr); gap: 48px; align-items: center">
 <div style="display: flex; flex-direction: column; gap: 20px">
-<h2 class="h2">Мәселеңізді талқылайық.</h2>
+<h2 class="h2">Тексеруге жазылу</h2>
 <p style="font-size: 18px; line-height: 1.6; color: #AEB8C7; max-width: 520px">Көлігіңіздің моделін және сізді не мазалайтынын жазыңыз. Аносов 91 мекенжайында күн сайын 09:30–19:00 күтеміз.</p>
 </div>
 <div style="display: flex; flex-direction: column; gap: 14px"><a class="btn btn-p" href="https://wa.me/77474956165" style="width: 100%; min-height: 60px; font-size: 16px"><svg aria-hidden="true" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 21l2-5.5A8.4 8.4 0 1 1 21 11.5z"></path></svg>WhatsApp арқылы жазылу</a>
@@ -605,22 +609,11 @@ d.querySelectorAll('.mcar').forEach(function(c){var k=c.children.length;if(k<2)r
 d.querySelectorAll('.pk-btn').forEach(function(b){b.addEventListener('click',function(){var r=d.querySelector('[aria-live]');if(!r||rm)return;r.classList.add('pk-swap');requestAnimationFrame(function(){requestAnimationFrame(function(){r.classList.remove('pk-swap')})})},true)});
 if(rm||!('IntersectionObserver' in window))return;
 de.classList.add('js-anim');
-// reveal on scroll
-var sel='section .h2, section .lead, section h2, section .card, section figure, section details, section .prow, .mcar, .mlist>*, .msteps>*, .m2>*, .mstats>*, section .g2>*, section .g3>*, section .g4>*, footer .g4>*';
-var els=[].slice.call(d.querySelectorAll(sel)).filter(function(e){return !e.closest('.m-hero,.hero,.mmenu,.fbar')&&!e.parentElement.closest('.rv,.mcar,.mfacts')});
-var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
-els.forEach(function(e){var p=e.parentElement,i=[].indexOf.call(p.children,e);e.style.transitionDelay=(Math.min(i,5)*70)+'ms';e.classList.add('rv');io.observe(e)});
 // report bars grow
 var bars=[].slice.call(d.querySelectorAll('div[style*="height: 10px"]>div[style*="width:"]'));
 bars.forEach(function(b){b.dataset.bar=b.style.width;b.style.width='0'});
 var bo=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.style.width=e.target.dataset.bar;bo.unobserve(e.target)}})},{threshold:.4});
 bars.forEach(function(b){bo.observe(b)});
-// count-up numbers
-function fmt(v,dec){var s=v.toFixed(dec).replace('.',',');return s.replace(/\B(?=(\d{3})+(?!\d))/g,' ')}
-var cs=[].slice.call(d.querySelectorAll('.mstats>div>div:first-child, .g4[style*="border-bottom: 1px solid #E3E8EF"]>div>div:first-child, .m-hero-rate>div>span:first-child'));
-cs.forEach(function(el){var tn=el.firstChild;if(!tn||tn.nodeType!==3)return;var raw=tn.nodeValue.trim(),num=parseFloat(raw.replace(/[\s ]/g,'').replace(',','.'));
- if(isNaN(num)||(num>1900&&num<2100&&raw.length===4))return;var dec=(raw.split(',')[1]||'').length,co=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;co.disconnect();
- var t0=performance.now();(function f(t){var p=Math.min(1,(t-t0)/1300),e=1-Math.pow(1-p,3);tn.nodeValue=fmt(num*e,dec);if(p<1)requestAnimationFrame(f);else tn.nodeValue=raw})(t0)},{threshold:.5});co.observe(el)});
 })();
 </script>
 </body>
