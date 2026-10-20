@@ -100,6 +100,8 @@ img.cover{height:100%}
 
 
 .mhdr,.mmenu,.fbar,.mstatus,.m-ic{display:none}
+div.card:hover{border-color:#E3E8EF;transform:none;box-shadow:none}
+@media (hover:none){.card:hover{transform:none !important;box-shadow:none !important}}
 html{scroll-behavior:smooth}
 @media (max-width:760px){
  footer{padding-bottom:calc(92px + env(safe-area-inset-bottom)) !important}
@@ -357,6 +359,11 @@ html{scroll-behavior:smooth}
 }
 @media (max-width:760px){
  /* polish */
+ .prow:has(>:nth-child(3)){row-gap:4px !important}
+ .prow>:nth-child(3){grid-column:2;grid-row:1/span 2;align-self:center;text-align:right}
+ .prow:has(>:nth-child(3))>:nth-child(2){grid-column:1;grid-row:2;font-size:13px !important}
+ .prow:has(>:nth-child(3))>:first-child{font-size:16px !important}
+ .prow.mono:has(>:nth-child(3))>:nth-child(2){display:none}
  .mcar-place>div{justify-content:flex-start !important}
  .mcar-place>div>*{margin-top:0 !important}
  .mcar-place>div>:last-child{margin-top:auto !important}
@@ -383,7 +390,7 @@ html{scroll-behavior:smooth}
 </head>
 <body>
 
-<header class="mhdr"><a aria-label="VITON.kz — басты бет" class="mhdr-logo" href="/kk/"><img alt="VITON.kz" height="28" src="/img/a90cfa11df4171200f94c412e9fb1da1.svg" width="98"/></a><div class="mhdr-r"><span class="mlsw"><a href="/ru/services/smoke-leak-test/" hreflang="ru" lang="ru">RU</a><a aria-current="true" href="/kk/services/smoke-leak-test/" hreflang="kk" lang="kk">ҚАЗ</a></span><a aria-label="Қоңырау шалу" class="mrb mrb-g" href="tel:+77474956165"><svg aria-hidden="true" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"></path></svg></a><button aria-controls="mmenu" aria-expanded="false" aria-label="Мәзірді ашу" class="mrb mrb-w mhdr-menu" type="button"><span class="i-open"><svg aria-hidden="true" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" viewbox="0 0 24 24" width="18"><path d="M4 8h16M4 16h16"></path></svg></span><span class="i-close"><svg aria-hidden="true" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" viewbox="0 0 24 24" width="18"><path d="M6 6l12 12M18 6L6 18"></path></svg></span></button></div></header><div style="background: #0B1220; color: #FFFFFF">
+<header class="mhdr"><a aria-label="VITON.kz — басты бет" class="mhdr-logo" href="/kk/"><img alt="VITON.kz" height="28" src="/img/a90cfa11df4171200f94c412e9fb1da1.svg" width="98"/></a><div class="mhdr-r"><span class="mlsw"><a href="/ru/services/smoke-leak-test/" hreflang="ru" lang="ru">РУС</a><a aria-current="true" href="/kk/services/smoke-leak-test/" hreflang="kk" lang="kk">ҚАЗ</a></span><a aria-label="Қоңырау шалу" class="mrb mrb-g" href="tel:+77474956165"><svg aria-hidden="true" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"></path></svg></a><button aria-controls="mmenu" aria-expanded="false" aria-label="Мәзірді ашу" class="mrb mrb-w mhdr-menu" type="button"><span class="i-open"><svg aria-hidden="true" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" viewbox="0 0 24 24" width="18"><path d="M4 8h16M4 16h16"></path></svg></span><span class="i-close"><svg aria-hidden="true" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" viewbox="0 0 24 24" width="18"><path d="M6 6l12 12M18 6L6 18"></path></svg></span></button></div></header><div style="background: #0B1220; color: #FFFFFF">
 <header class="w" style="display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 88px; border-bottom: 1px solid rgba(255,255,255,.08)">
 <a aria-label="VITON.kz — басты бетке" href="/kk/" style="display: inline-flex; align-items: center; flex: none"><img alt="VITON.kz" src="/img/a90cfa11df4171200f94c412e9fb1da1.svg" style="height: 44px; width: auto; display: block"/></a>
 <nav aria-label="Негізгі мәзір" class="nav" style="display: flex; gap: 36px"><a href="/kk/services/" style="color: #FFFFFF">Қызметтер</a>
@@ -391,7 +398,7 @@ html{scroll-behavior:smooth}
 <a href="/kk/hyperfuel/">Hyperfuel</a>
 <a href="/kk/blog/">Пайдалы</a>
 <a href="/kk/contacts/">Байланыс</a></nav>
-<div style="display: flex; align-items: center; gap: 14px"><span class="lsw hd-lsw" data-i18n-skip=""><a href="/ru/services/smoke-leak-test/" hreflang="ru" lang="ru">RU</a><a aria-current="true" href="/kk/services/smoke-leak-test/" hreflang="kk" lang="kk">ҚАЗ</a></span><a class="btn btn-p" href="https://wa.me/77474956165" style="min-height: 46px; padding: 0 20px; font-size: 14px"><svg aria-hidden="true" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 21l2-5.5A8.4 8.4 0 1 1 21 11.5z"></path></svg>Жазылу</a>
+<div style="display: flex; align-items: center; gap: 14px"><span class="lsw hd-lsw" data-i18n-skip=""><a href="/ru/services/smoke-leak-test/" hreflang="ru" lang="ru">РУС</a><a aria-current="true" href="/kk/services/smoke-leak-test/" hreflang="kk" lang="kk">ҚАЗ</a></span><a class="btn btn-p" href="https://wa.me/77474956165" style="min-height: 46px; padding: 0 20px; font-size: 14px"><svg aria-hidden="true" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 21l2-5.5A8.4 8.4 0 1 1 21 11.5z"></path></svg>Жазылу</a>
 </div>
 </header>
 <div class="w" style="padding-top: 28px; font-size: 13px; color: #8A96A8; display: flex; gap: 10px; flex-wrap: wrap"><a href="/kk/" style="color: #8A96A8">Басты бет</a><span>/</span><a href="/kk/services/" style="color: #8A96A8">Қызметтер</a><span>/</span><span style="color: #C9D2DF">Түтін генераторымен ағуды іздеу</span></div>
