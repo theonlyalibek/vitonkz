@@ -499,7 +499,7 @@ span[style*="width: 44px; height: 44px; border-radius: 12px"]{background:none !i
  .mdots{display:none !important}
  /* Hyper Fuel: full bleed */
  .hf{margin:0 -20px !important;border-radius:0 !important}
- .map2gis.map2gis{height:400px !important;border-radius:16px !important}
+ section:has(>.w>.map2gis){display:none !important}
  /* service hero: photo, breadcrumbs, title, price above the button */
  .m-shero{padding-top:0 !important}
  .m-shero>div:last-child{order:-1;margin:0 -20px !important;height:240px !important;border-radius:0 !important;position:relative}
@@ -1120,6 +1120,8 @@ d.querySelectorAll('.mcar').forEach(function(c){var k=c.children.length;if(k<2)r
  function upd(){if(c.scrollWidth<=c.clientWidth+4){w.style.display='none';return}w.style.display='';var it=c.children[0],step=it.getBoundingClientRect().width+12,a=Math.round(c.scrollLeft/step);
   if(c.scrollLeft+c.clientWidth>=c.scrollWidth-4)a=k-1;a=Math.min(k-1,Math.max(0,a));nn.textContent=(a+1)+' / '+k;bar.style.width=((a+1)/k*100)+'%'}
  c.addEventListener('scroll',upd,{passive:true});window.addEventListener('resize',upd);upd()});
+// 2GIS map: computers only (on phones the widget stays blank; the route button opens the 2GIS app)
+var mf=d.querySelector('iframe[data-src]');if(mf&&!(mq&&mq('(max-width: 760px)').matches))mf.src=mf.dataset.src;
 // picker swap
 d.querySelectorAll('.pk-btn').forEach(function(b){b.addEventListener('click',function(){var r=d.querySelector('[aria-live]');if(!r||rm)return;r.classList.add('pk-swap');requestAnimationFrame(function(){requestAnimationFrame(function(){r.classList.remove('pk-swap')})})},true)});
 if(rm||!('IntersectionObserver' in window))return;
