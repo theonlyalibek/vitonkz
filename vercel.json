@@ -6,6 +6,16 @@
       "source": "/",
       "destination": "/ru/",
       "permanent": false
+    },
+    {
+      "source": "/v2",
+      "destination": "/v2/ru/",
+      "permanent": false
+    },
+    {
+      "source": "/v2/",
+      "destination": "/v2/ru/",
+      "permanent": false
     }
   ],
   "headers": [
@@ -20,6 +30,24 @@
     },
     {
       "source": "/img/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/v2/fonts/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/v2/img/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
