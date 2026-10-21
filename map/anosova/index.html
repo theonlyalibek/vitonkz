@@ -1,9 +1,13 @@
 <!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex"><title>Карта 2ГИС · VITON, Аносова 91</title>
-<style>html,body{margin:0;height:100%;overflow:hidden;background:#E9EDF3;font:14px system-ui,sans-serif}.dg-widget-link{position:absolute;left:-9999px}.nf{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px}.nf .dg-widget-link{position:static}.nf a{color:#0B6BD8;font-weight:700}</style></head><body>
-<a class="dg-widget-link" href="https://2gis.kz/almaty/firm/70000001104923219/center/76.88479185104372,43.25206407082192/zoom/16?utm_medium=widget-source&amp;utm_campaign=firmsonmap&amp;utm_source=bigMap" target="_top">Посмотреть на карте Алматы</a>
-<div class="dg-widget-link"><a href="https://2gis.kz/almaty/firm/70000001104923219/photos/70000001104923219/center/76.88479185104372,43.25206407082192/zoom/17?utm_medium=widget-source&amp;utm_campaign=firmsonmap&amp;utm_source=photos" target="_top">Фотографии компании</a></div>
-<div class="dg-widget-link"><a href="https://2gis.kz/almaty/center/76.884787,43.251485/zoom/16/routeTab/rsType/bus/to/76.884787,43.251485╎Viton.kz, лаборатория по чистке форсунoк?utm_medium=widget-source&amp;utm_campaign=firmsonmap&amp;utm_source=route" target="_top">Найти проезд до Viton.kz</a></div>
-<script charset="utf-8" src="https://widgets.2gis.com/js/DGWidgetLoader.js"></script>
-<script charset="utf-8">if(window.DGWidgetLoader){new DGWidgetLoader({"width":Math.max(280,window.innerWidth),"height":Math.max(300,window.innerHeight),"borderColor":"#E9EDF3","pos":{"lat":43.25206407082192,"lon":76.88479185104372,"zoom":16},"opt":{"city":"almaty"},"org":[{"id":"70000001104923219"}]})}else{document.body.className="nf"}</script>
-<noscript><a href="https://2gis.kz/almaty/firm/70000001104923219" target="_top">Открыть VITON, Аносова 91 в 2ГИС</a></noscript>
+<style>html,body{margin:0;height:100%;overflow:hidden;background:#E9EDF3;font:14px system-ui,sans-serif}iframe{position:absolute;left:0;top:0;border:0;transform-origin:0 0;display:block}
+.nf{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;height:100%}.nf a{color:#0B6BD8;font-weight:700}</style></head><body>
+<div class="nf" id="nf"><a href="https://2gis.kz/almaty/firm/70000001104923219" target="_top">Открыть VITON, Аносова 91 в 2ГИС</a><a href="https://2gis.kz/almaty/center/76.884787,43.251485/zoom/16/routeTab/rsType/car/to/76.884787,43.251485" target="_top">Найти проезд</a></div>
+<script>
+// 2GIS "firmsonmap" widget (owner's settings). It only renders between 500x400 and 1200x1000 px,
+// so on a narrow phone it is drawn at 500 px wide and scaled down to fit the frame.
+(function(){var o={pos:{lat:43.25206407082192,lon:76.88479185104372,zoom:16},opt:{city:'almaty'},org:'70000001104923219'};
+var w=window.innerWidth,h=window.innerHeight,tw=Math.min(1200,Math.max(500,w)),k=w/tw,th=Math.min(1000,Math.max(400,Math.round(h/k)));
+var f=document.createElement('iframe');f.title='Карта 2ГИС';f.src='https://widgets.2gis.com/widget?type=firmsonmap&options='+encodeURIComponent(JSON.stringify(o));
+f.style.width=tw+'px';f.style.height=th+'px';f.style.transform='scale('+k+')';f.onload=function(){document.getElementById('nf').style.display='none'};document.body.appendChild(f)})();
+</script>
 </body></html>
