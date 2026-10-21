@@ -5,9 +5,13 @@
 <script>
 // 2GIS "firmsonmap" widget (owner's settings). It only renders between 500x400 and 1200x1000 px,
 // so on a narrow phone it is drawn at 500 px wide and scaled down to fit the frame.
-(function(){var o={pos:{lat:43.25206407082192,lon:76.88479185104372,zoom:16},opt:{city:'almaty'},org:'70000001104923219'};
-var w=window.innerWidth,h=window.innerHeight,tw=Math.min(1200,Math.max(500,w)),k=w/tw,th=Math.min(1000,Math.max(400,Math.round(h/k)));
-var f=document.createElement('iframe');f.title='Карта 2ГИС';f.src='https://widgets.2gis.com/widget?type=firmsonmap&options='+encodeURIComponent(JSON.stringify(o));
-f.style.width=tw+'px';f.style.height=th+'px';f.style.transform='scale('+k+')';f.onload=function(){document.getElementById('nf').style.display='none'};document.body.appendChild(f)})();
+(function(){var o={pos:{lat:43.25206407082192,lon:76.88479185104372,zoom:16},opt:{city:'almaty'},org:'70000001104923219'},f=null;
+function fit(){var w=document.documentElement.clientWidth||window.innerWidth,h=document.documentElement.clientHeight||window.innerHeight;if(!w||!h)return false;
+ var tw=Math.min(1200,Math.max(500,w)),k=w/tw,th=Math.min(1000,Math.max(400,Math.round(h/k)));
+ if(!f){f=document.createElement('iframe');f.title='Карта 2ГИС';f.onload=function(){document.getElementById('nf').style.display='none'};
+  f.src='https://widgets.2gis.com/widget?type=firmsonmap&options='+encodeURIComponent(JSON.stringify(o));document.body.appendChild(f)}
+ f.style.width=tw+'px';f.style.height=th+'px';f.style.transform='scale('+k+')';return true}
+// the frame can report 0x0 for a moment while the page is still laying out (seen on phones), so size it again once it has a size
+if(!fit()){var t=setInterval(function(){if(fit())clearInterval(t)},100)}window.addEventListener('resize',fit);window.addEventListener('load',fit)})();
 </script>
 </body></html>
