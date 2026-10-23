@@ -16,7 +16,7 @@ cp "$ROOT"/tools/production/robots.txt "$OUT"/robots.txt
   (cd "$OUT" && find ru kk -name index.html | sort | sed 's#index.html$##') | while read -r p; do echo "  <url><loc>https://viton.kz/$p</loc></url>"; done
   echo '</urlset>'
 } > "$OUT"/sitemap.xml
-printf '# VITON.KZ — production\n\nГотовый сайт для хостинга ps.kz (Plesk разворачивает эту ветку в httpdocs).\nНе править вручную: собирается из v2/ скриптом tools/build_production.sh.\n' > "$OUT"/README.md
+printf '# VITON.KZ — production\n\nГотовый сайт для хостинга ps.kz. Plesk разворачивает эту ветку в httpdocs автоматически по вебхуку GitHub после каждого push.\nНе править вручную: собирается из v2/ скриптом tools/build_production.sh.\n' > "$OUT"/README.md
 
 SRC=$(git rev-parse --short HEAD)
 WT=$(mktemp -d)
