@@ -5,22 +5,30 @@
 ## Контакты
 - Автосервис: Алматы, ул. Аносова, 91. Ежедневно 09:30–19:00. +7 747 495 61 65, WhatsApp: https://wa.me/77474956165
 - Лаборатория для снятых форсунок: авторынок «Жибек Жолы», пр. Райымбека 517/6, ряд 4Г, место 52. Вт–Вс 09:00–18:00. +7 747 136 50 88
-- Цены указаны на странице каждой услуги.
+- Цены «от» ниже; точную стоимость называем после осмотра и согласуем до начала работ.
+
+## Ключевые факты
+- Работаем с 2018 года. Основатель — Виктор Новиков.
+- Обслуживаем бензиновые автомобили примерно от 2010 года, включая моторы с непосредственным впрыском (GDI, FSI). Дизельные форсунки не обслуживаем.
+- Форсунки чистим только со снятием: тест на стенде, ультразвук, промывка, повторный тест. Клиент получает отчёт с замерами до и после, фото и видео факела распыла.
+- Чистка форсунок обычно занимает от 2 до 5 часов.
+- Снятые форсунки можно привезти в лабораторию на авторынке «Жибек Жолы».
+- Оплата: наличные, перевод, банк; в лаборатории также карта и QR.
 
 ## Услуги
-- [Чистка форсунок](https://viton.kz/ru/services/injector-cleaning/)
-- [Чистка впускных клапанов](https://viton.kz/ru/services/walnut-valve-cleaning/)
-- [Компьютерная диагностика](https://viton.kz/ru/services/computer-diagnostics/)
-- [Замер компрессии](https://viton.kz/ru/services/compression-test/)
-- [Эндоскопия двигателя](https://viton.kz/ru/services/engine-endoscopy/)
-- [Поиск утечек дымогенератором](https://viton.kz/ru/services/smoke-leak-test/)
-- [Замена свечей зажигания](https://viton.kz/ru/services/spark-plug-replacement/)
-- [Устранение течи масла и антифриза](https://viton.kz/ru/services/oil-coolant-leak-repair/)
-- [Замена прокладки клапанной крышки](https://viton.kz/ru/services/valve-cover-gasket/)
-- [Замена ремня ГРМ](https://viton.kz/ru/services/timing-belt-replacement/)
-- [Замена сальников коленвала](https://viton.kz/ru/services/crankshaft-seal-replacement/)
-- [Заправка кондиционера](https://viton.kz/ru/services/ac-refill/)
-- [Чистка печки](https://viton.kz/ru/services/heater-cleaning/)
+- [Чистка форсунок](https://viton.kz/ru/services/injector-cleaning/) — от 2 500 ₸
+- [Чистка впускных клапанов](https://viton.kz/ru/services/walnut-valve-cleaning/) — от 5 000 ₸
+- [Компьютерная диагностика](https://viton.kz/ru/services/computer-diagnostics/) — от 5 000 ₸
+- [Замер компрессии](https://viton.kz/ru/services/compression-test/) — от 2 000 ₸
+- [Эндоскопия двигателя](https://viton.kz/ru/services/engine-endoscopy/) — от 2 000 ₸
+- [Поиск утечек дымогенератором](https://viton.kz/ru/services/smoke-leak-test/) — от 10 000 ₸
+- [Замена свечей зажигания](https://viton.kz/ru/services/spark-plug-replacement/) — от 1 000 ₸
+- [Устранение течи масла и антифриза](https://viton.kz/ru/services/oil-coolant-leak-repair/) — от 5 000 ₸
+- [Замена прокладки клапанной крышки](https://viton.kz/ru/services/valve-cover-gasket/) — от 10 000 ₸
+- [Замена ремня ГРМ](https://viton.kz/ru/services/timing-belt-replacement/) — от 25 000 ₸
+- [Замена сальников коленвала](https://viton.kz/ru/services/crankshaft-seal-replacement/) — от 25 000 ₸
+- [Заправка кондиционера](https://viton.kz/ru/services/ac-refill/) — от 15 000 ₸
+- [Чистка печки](https://viton.kz/ru/services/heater-cleaning/) — от 15 000 ₸
 
 ## Статьи
 - [Признаки загрязнённых форсунок: 7 симптомов](https://viton.kz/ru/blog/priznaki-zagryaznennyh-forsunok/)
@@ -35,3 +43,4 @@
 ## Другое
 - [Присадки Hyper Fuel M1 и Aplidium](https://viton.kz/ru/hyperfuel/)
 - [Казахская версия сайта](https://viton.kz/kk/)
+- [Политика обработки персональных данных](https://viton.kz/ru/privacy/)
