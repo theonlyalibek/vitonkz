@@ -772,13 +772,13 @@ span[style*="width: 44px; height: 44px; border-radius: 12px"]{background:none !i
 <p class="lead">Оставьте номер и модель автомобиля. Мастер свяжется с вами в рабочее время.</p>
 </div>
 <form class="g2" style="display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 20px; padding: 40px; border-radius: 28px; background: #F3F5F8">
-<label class="field">Имя<input name="name" placeholder="Как к вам обращаться" type="text"/></label>
-<label class="field">Телефон<input name="phone" placeholder="+7 7__ ___ __ __" type="tel"/></label>
+<label class="field">Имя<input name="name" placeholder="Как к вам обращаться" type="text" required/></label>
+<label class="field">Телефон<input name="phone" placeholder="+7 7__ ___ __ __" type="tel" required/></label>
 <label class="field">Автомобиль<input name="car" placeholder="Марка, модель, год" type="text"/></label>
 <label class="field">Куда обращаетесь<select name="point"><option>Автосервис, Аносова 91</option><option>Лаборатория, Жибек Жолы</option></select></label>
 <div style="grid-column: 1 / -1; display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; padding-top: 8px">
-<span style="font-size: 13px; line-height: 1.5; color: #5B6577; max-width: 380px">Нажимая кнопку, вы соглашаетесь с <a href="#">политикой обработки данных</a>.</span>
-<button class="btn btn-p" style="border: 0; cursor: pointer; font-family: inherit" type="button">Жду звонка</button>
+<span style="font-size: 13px; line-height: 1.5; color: #5B6577; max-width: 380px">Нажимая кнопку, вы соглашаетесь с <a href="/v2/ru/privacy/" style="text-decoration: underline">политикой обработки данных</a>.</span>
+<button class="btn btn-p" style="border: 0; cursor: pointer; font-family: inherit" type="submit">Отправить в WhatsApp</button>
 </div>
 </form>
 </div>
@@ -826,6 +826,14 @@ bars.forEach(function(b){b.dataset.bar=b.style.width;b.style.width='0'});
 var bo=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.style.width=e.target.dataset.bar;bo.unobserve(e.target)}})},{threshold:.4});
 bars.forEach(function(b){bo.observe(b)});
 })();
+</script>
+<script>
+// contact form -> WhatsApp of the chosen point (no backend on a static site)
+(function(){var f=document.querySelector('form.g2');if(!f)return;
+f.addEventListener('submit',function(e){e.preventDefault();var g=function(n){var x=f.elements[n];return x?x.value.trim():''};
+var p=g('point'),num=/Жибек|Жібек|Зертхана|Лаборатория/.test(p)?'77471365088':'77474956165';
+var t=['Здравствуйте! Заявка с сайта VITON.KZ.'+' '+p,'Имя: '+g('name'),'Телефон: '+g('phone'),'Автомобиль: '+g('car')].join('\n');
+window.open('https://wa.me/'+num+'?text='+encodeURIComponent(t),'_blank','noopener')});})();
 </script>
 </body>
 </html>
