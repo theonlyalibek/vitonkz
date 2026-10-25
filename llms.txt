@@ -35,9 +35,11 @@
 - [Замена ремня ГРМ](https://viton.kz/ru/services/timing-belt-replacement/) — от 25 000 ₸
 - [Замена сальников коленвала](https://viton.kz/ru/services/crankshaft-seal-replacement/) — от 25 000 ₸
 - [Заправка кондиционера](https://viton.kz/ru/services/ac-refill/) — от 15 000 ₸
-- [Чистка печки](https://viton.kz/ru/services/heater-cleaning/) — от 15 000 ₸
+- [Чистка печки](https://viton.kz/ru/services/heater-cleaning/) — от 15 000 ₸, промывка радиатора печки через патрубки без разбора панели
 
 ## Статьи
+- [Печка дует холодным: 7 причин и что делать](https://viton.kz/ru/blog/pechka-duet-holodnym/)
+- [Промывка радиатора печки без снятия: помогает ли и как делают](https://viton.kz/ru/blog/promyvka-radiatora-pechki-bez-snyatiya/)
 - [Горит Check Engine: что значит и можно ли ехать дальше](https://viton.kz/ru/blog/gorit-check-engine/)
 - [Троит двигатель: 7 причин и как найти нужную](https://viton.kz/ru/blog/troit-dvigatel/)
 - [Помогает ли присадка для чистки форсунок: когда да, когда нет](https://viton.kz/ru/blog/pomogaet-li-prisadka-dlya-chistki-forsunok/)
