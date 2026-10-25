@@ -10,6 +10,7 @@ cp "$ROOT"/404.html "$ROOT"/llms.txt "$OUT"/
 sed -i 's#/v2/#/#g' "$OUT"/404.html
 cp "$ROOT"/tools/production/htaccess "$OUT"/.htaccess
 cp "$ROOT"/tools/production/robots.txt "$OUT"/robots.txt
+mkdir -p "$OUT"/.github/workflows && cp "$ROOT"/tools/production/indexnow.yml "$OUT"/.github/workflows/indexnow.yml
 {
   echo '<?xml version="1.0" encoding="UTF-8"?>'
   echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'

@@ -32,3 +32,4 @@ Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), 
 <Files "README.md">
 Require all denied
 </Files>
+RedirectMatch 404 ^/\.github/

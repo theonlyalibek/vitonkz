@@ -1,0 +1,22 @@
+# Pings IndexNow (Bing, Yandex, Seznam, Naver) with the pages changed by each production build.
+name: IndexNow
+on:
+  push:
+    branches: [production]
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - name: Submit changed URLs
+        run: |
+          KEY=c0858b904853b5140fa2b27a110477c5
+          sleep 90  # let Plesk deploy first
+          URLS=$(git diff --name-only HEAD~1 HEAD -- 'ru/*index.html' 'kk/*index.html' | sed 's#index.html$##; s#^#https://viton.kz/#' | jq -R . | jq -sc .)
+          echo "$URLS"
+          [ "$URLS" = "[]" ] && exit 0
+          curl -sS -w '\nHTTP %{http_code}\n' -X POST https://api.indexnow.org/indexnow \
+            -H 'Content-Type: application/json; charset=utf-8' \
+            -d "{\"host\":\"viton.kz\",\"key\":\"$KEY\",\"keyLocation\":\"https://viton.kz/$KEY.txt\",\"urlList\":$URLS}"
