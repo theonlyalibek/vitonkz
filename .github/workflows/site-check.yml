@@ -1,0 +1,14 @@
+name: site-check
+on:
+  push:
+    branches: [claude/project-thread-3on777]
+    paths: ['.github/workflows/site-check.yml']
+  workflow_dispatch:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          for u in https://viton.kz/ https://viton.kz/ru/ https://viton.kz/favicon.ico https://viton.kz/img/favicon-48.png https://viton.kz/img/favicon-96.png https://viton.kz/img/favicon-192.png https://viton.kz/img/favicon.svg https://viton.kz/img/apple-touch-icon.png; do
+            echo "== $u"; curl -sS -o /tmp/f -D - -A "Mozilla/5.0 (compatible; Googlebot/2.1)" "$u" | grep -iE '^(HTTP|content-type|location|content-length)'; file /tmp/f; done
+          echo "== head of /ru/"; curl -sS https://viton.kz/ru/ | grep -io '<link[^>]*icon[^>]*>'
