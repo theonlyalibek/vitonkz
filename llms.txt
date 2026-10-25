@@ -22,9 +22,9 @@
 ## Услуги
 - [Чистка форсунок](https://viton.kz/ru/services/injector-cleaning/) — от 2 500 ₸
 - [Чистка впускных клапанов](https://viton.kz/ru/services/walnut-valve-cleaning/) — от 5 000 ₸
-- [Чистка клапана EGR](https://viton.kz/ru/services/egr-valve-cleaning/) — цена по модели
-- [Чистка клапана вентиляции картера PCV](https://viton.kz/ru/services/pcv-valve-cleaning/) — цена по модели
-- [Чистка дроссельной заслонки с адаптацией](https://viton.kz/ru/services/throttle-body-cleaning/) — цена по модели
+- [Чистка клапана EGR](https://viton.kz/ru/services/egr-valve-cleaning/) — от 10 000 ₸
+- [Чистка клапана вентиляции картера PCV](https://viton.kz/ru/services/pcv-valve-cleaning/) — от 10 000 ₸
+- [Чистка дроссельной заслонки с адаптацией](https://viton.kz/ru/services/throttle-body-cleaning/) — от 10 000 ₸
 - [Компьютерная диагностика](https://viton.kz/ru/services/computer-diagnostics/) — от 5 000 ₸
 - [Замер компрессии](https://viton.kz/ru/services/compression-test/) — от 2 000 ₸
 - [Эндоскопия двигателя](https://viton.kz/ru/services/engine-endoscopy/) — от 2 000 ₸
