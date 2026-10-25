@@ -699,6 +699,14 @@ span[style*="width: 44px; height: 44px; border-radius: 12px"]{background:none !i
 
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "M1 мен Aplidium-ның айырмашылығы неде?", "acceptedAnswer": {"@type": "Answer", "text": "M1-ді литрлеп құяды, ол октанды бірнеше бірлікке көтереді: бұл қуатты және турбиналы моторларға арналған нұсқа. Aplidium миллилитрмен мөлшерленеді, 1–2 бірлік қосады және кәдімгі бензинді сәл жақсарту үшін жарайды."}}, {"@type": "Question", "name": "АИ-95 құйсам, қоспа керек пе?", "acceptedAnswer": {"@type": "Answer", "text": "Бензин сапалы болып, мотор біркелкі жұмыс істесе, әдетте керек емес. Өндірушінің өзі күнделікті жүру үшін қоспасыз сапалы АИ-95 немесе АИ-98 жақсырақ екенін жазады. Қоспа мотор жоғарырақ октанды талап еткенде немесе жанармай бекетіне күмән болғанда керек."}}, {"@type": "Question", "name": "Дизельге құюға бола ма?", "acceptedAnswer": {"@type": "Answer", "text": "Жоқ. Екі қоспа да тек бензин қозғалтқыштарына арналған. Оларды дизельмен, таза спирттермен және керосинмен қолданбайды."}}, {"@type": "Question", "name": "Қоспа форсунка тазалауды алмастыра ма?", "acceptedAnswer": {"@type": "Answer", "text": "Жоқ. Егер форсункалар ластанып қалса, алдымен оларды стендте тексерген жөн. Қоспаны міндетке қарай таңдаймыз."}}, {"@type": "Question", "name": "Сервиске келмей сатып алуға бола ма?", "acceptedAnswer": {"@type": "Answer", "text": "Иә. WhatsApp-қа жазыңыз, Аносов 91-ден қашан алып кететініңізді келісеміз."}}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Басты бет", "item": "https://viton.kz/kk/"}, {"@type": "ListItem", "position": 2, "name": "Hyper M1 және Aplidium Алматыда", "item": "https://viton.kz/kk/hyperfuel/"}]}</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-69P5BW47GW"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-69P5BW47GW');
+</script>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
 (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();
@@ -708,8 +716,8 @@ k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNo
 ym(113761207, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
 // goals: WhatsApp / phone clicks and the contact form
 document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;var h=a.getAttribute('href');
-if(h.indexOf('wa.me/')>-1)ym(113761207,'reachGoal','whatsapp');else if(h.indexOf('tel:')===0)ym(113761207,'reachGoal','phone')},true);
-document.addEventListener('submit',function(){ym(113761207,'reachGoal','form')},true);
+if(h.indexOf('wa.me/')>-1)(ym(113761207,'reachGoal','whatsapp'),gtag('event','whatsapp_click'));else if(h.indexOf('tel:')===0)(ym(113761207,'reachGoal','phone'),gtag('event','phone_click'))},true);
+document.addEventListener('submit',function(){ym(113761207,'reachGoal','form');gtag('event','form_submit')},true);
 </script>
 <!-- /Yandex.Metrika counter -->
 </head>
