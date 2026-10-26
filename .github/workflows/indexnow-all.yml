@@ -1,0 +1,19 @@
+# One-off: submit every URL from the live sitemap to IndexNow (Bing, Yandex and partners).
+name: indexnow-all
+on:
+  push:
+    branches: [claude/project-thread-3on777]
+    paths: ['.github/workflows/indexnow-all.yml']
+  workflow_dispatch:
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          KEY=c0858b904853b5140fa2b27a110477c5
+          URLS=$(curl -sS https://viton.kz/sitemap.xml | grep -o '<loc>[^<]*' | sed 's/<loc>//' | jq -R . | jq -sc .)
+          echo "URLs: $(echo "$URLS" | jq length)"
+          BODY="{\"host\":\"viton.kz\",\"key\":\"$KEY\",\"keyLocation\":\"https://viton.kz/$KEY.txt\",\"urlList\":$URLS}"
+          for ep in https://api.indexnow.org/indexnow https://www.bing.com/indexnow https://yandex.com/indexnow; do
+            echo "== $ep"; curl -sS -w '\nHTTP %{http_code}\n' -X POST "$ep" -H 'Content-Type: application/json; charset=utf-8' -d "$BODY"
+          done
