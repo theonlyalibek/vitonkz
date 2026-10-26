@@ -9,6 +9,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          for u in https://viton.kz/ https://viton.kz/ru/ https://viton.kz/favicon.ico https://viton.kz/img/favicon-48.png https://viton.kz/img/favicon-96.png https://viton.kz/img/favicon-192.png https://viton.kz/img/favicon.svg https://viton.kz/img/apple-touch-icon.png; do
-            echo "== $u"; curl -sS -o /tmp/f -D - -A "Mozilla/5.0 (compatible; Googlebot/2.1)" "$u" | grep -iE '^(HTTP|content-type|location|content-length)'; file /tmp/f; done
-          echo "== head of /ru/"; curl -sS https://viton.kz/ru/ | grep -io '<link[^>]*icon[^>]*>'
+          # How AI/search crawlers see the site from outside Kazakhstan (bot check)
+          for ua in "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; PerplexityBot/1.0; +https://perplexity.ai/perplexitybot)" \
+                    "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Perplexity-User/1.0; +https://perplexity.ai/perplexity-user)" \
+                    "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; OAI-SearchBot/1.0; +https://openai.com/searchbot)" \
+                    "Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)" \
+                    "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)" \
+                    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36"; do
+            for u in https://viton.kz/ https://viton.kz/ru/ https://viton.kz/robots.txt; do
+              echo "== $u | ${ua:0:70}"
+              curl -sS -o /tmp/f -w 'HTTP %{http_code} time %{time_total}s size %{size_download} ip %{remote_ip}\n' -A "$ua" --max-time 20 "$u" || echo "CURL FAILED"
+              head -c 200 /tmp/f | tr '\n' ' '; echo
+            done
+          done
+          echo "== DNS"; getent hosts viton.kz; getent hosts www.viton.kz
+          echo "== TLS"; echo | openssl s_client -connect viton.kz:443 -servername viton.kz 2>/dev/null | openssl x509 -noout -subject -issuer -dates
