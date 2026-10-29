@@ -42,6 +42,8 @@
 - [Промывка радиатора печки без снятия: помогает ли и как делают](https://viton.kz/ru/blog/promyvka-radiatora-pechki-bez-snyatiya/)
 - [Ультразвуковая чистка форсунок: как работает и сколько стоит](https://viton.kz/ru/blog/ultrazvukovaya-chistka-forsunok/)
 - [Плохой бензин и форсунки: что делать после заправки](https://viton.kz/ru/blog/plohoy-benzin-i-forsunki/)
+- [Плавают обороты на холостом: 7 причин и что делать](https://viton.kz/ru/blog/plavayut-oboroty-na-holostom/)
+- [Ошибка P0401: недостаточный поток EGR, причины и ремонт](https://viton.kz/ru/blog/oshibka-egr-p0401/)
 - [Кейс: Lexus NX 200t, троит на холодную и P0171, чистка форсунок](https://viton.kz/ru/blog/keys-lexus-nx-200t-chistka-forsunok/)
 - [Кейс: Toyota Camry 70, плавают обороты, чистка форсунок](https://viton.kz/ru/blog/keys-toyota-camry-70-chistka-forsunok/)
 - [Кейс: BMW X5 F15 N55, бедная смесь и коррекция +25%, чистка форсунок](https://viton.kz/ru/blog/keys-bmw-x5-f15-n55-chistka-forsunok/)
