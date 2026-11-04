@@ -46,6 +46,8 @@
 - [Ошибка P0401: недостаточный поток EGR, причины и ремонт](https://viton.kz/ru/blog/oshibka-egr-p0401/)
 - [Масло в воздушном фильтре: клапан PCV или что-то серьёзнее](https://viton.kz/ru/blog/maslo-v-vozdushnom-filtre-pcv/)
 - [Как часто чистить дроссель и как понять, что пора](https://viton.kz/ru/blog/kak-chasto-chistit-drossel/)
+- [Замер компрессии двигателя: когда нужен, что показывает и цена](https://viton.kz/ru/blog/zamer-kompressii-dvigatelya/)
+- [Компьютерная диагностика двигателя: что показывает и сколько стоит](https://viton.kz/ru/blog/kompyuternaya-diagnostika-dvigatelya/)
 - [Кейс: Lexus NX 200t, троит на холодную и P0171, чистка форсунок](https://viton.kz/ru/blog/keys-lexus-nx-200t-chistka-forsunok/)
 - [Кейс: Toyota Camry 70, плавают обороты, чистка форсунок](https://viton.kz/ru/blog/keys-toyota-camry-70-chistka-forsunok/)
 - [Кейс: BMW X5 F15 N55, бедная смесь и коррекция +25%, чистка форсунок](https://viton.kz/ru/blog/keys-bmw-x5-f15-n55-chistka-forsunok/)
