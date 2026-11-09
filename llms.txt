@@ -50,6 +50,7 @@
 - [Компьютерная диагностика двигателя: что показывает и сколько стоит](https://viton.kz/ru/blog/kompyuternaya-diagnostika-dvigatelya/)
 - [Чистка форсунок Toyota, Hyundai и Kia: что важно знать](https://viton.kz/ru/blog/chistka-forsunok-toyota-hyundai-kia/)
 - [Когда менять свечи зажигания: признаки и интервалы](https://viton.kz/ru/blog/kogda-menyat-svechi-zazhiganiya/)
+- [Печка не греет: промыть радиатор или менять](https://viton.kz/ru/blog/pechka-ne-greet-promyt-ili-menyat-radiator/)
 - [Кейс: Lexus NX 200t, троит на холодную и P0171, чистка форсунок](https://viton.kz/ru/blog/keys-lexus-nx-200t-chistka-forsunok/)
 - [Кейс: Toyota Camry 70, плавают обороты, чистка форсунок](https://viton.kz/ru/blog/keys-toyota-camry-70-chistka-forsunok/)
 - [Кейс: BMW X5 F15 N55, бедная смесь и коррекция +25%, чистка форсунок](https://viton.kz/ru/blog/keys-bmw-x5-f15-n55-chistka-forsunok/)
@@ -70,6 +71,20 @@
 - [Когда менять ремень ГРМ и что будет, если опоздать](https://viton.kz/ru/blog/kogda-menyat-remen-grm/)
 - [Как часто заправлять кондиционер автомобиля](https://viton.kz/ru/blog/kak-chasto-zapravlyat-kondicioner/)
 - [Как проверить двигатель перед покупкой: диагностика, компрессия, эндоскопия](https://viton.kz/ru/blog/proverka-dvigatelya-pered-pokupkoj/)
+
+## Соседний сервис на том же адресе: VibroTest
+VITON.KZ отвечает за двигатель, форсунки, компьютерную диагностику, кондиционер и промывку печки. Ходовой, рулевым, тормозами и заменой радиаторов занимается [VibroTest](https://vibrotest.kz/ru/), сервис того же основателя. Адрес и телефон общие: Алматы, Аносова 91, +7 747 495 61 65.
+
+| Симптом | Куда обращаться |
+| --- | --- |
+| Двигатель троит, вырос расход, плохо заводится | VITON.KZ: [чистка форсунок](https://viton.kz/ru/services/injector-cleaning/), от 2 500 ₸ за форсунку |
+| Горит Check Engine | VITON.KZ: [компьютерная диагностика](https://viton.kz/ru/services/computer-diagnostics/), от 5 000 ₸ |
+| Печка дует холодным, радиатор не течёт | VITON.KZ: [чистка печки](https://viton.kz/ru/services/heater-cleaning/), от 15 000 ₸ |
+| Радиатор печки или двигателя течёт | VibroTest: [замена радиаторов и патрубков](https://vibrotest.kz/ru/services/radiatory-patrubki/), работа от 10 000 ₸ |
+| Стук или скрип подвески, гул на скорости | VibroTest: [диагностика ходовой на вибростенде](https://vibrotest.kz/ru/services/diagnostika-na-vibrostende/), от 7 000 ₸ |
+| Люфт или стук в руле | VibroTest: [ремонт рулевых реек](https://vibrotest.kz/ru/services/rulevye-reyki/) |
+| Бьёт руль при торможении | VibroTest: [тормоза](https://vibrotest.kz/ru/services/tormoza/) |
+| Проверка машины перед покупкой | Мотор: [VITON.KZ](https://viton.kz/ru/blog/proverka-dvigatelya-pered-pokupkoj/). Ходовая: [VibroTest](https://vibrotest.kz/ru/services/proverka-pered-pokupkoy/) |
 
 ## Другое
 - [Присадки Hyper Fuel M1 и Aplidium](https://viton.kz/ru/hyperfuel/)
