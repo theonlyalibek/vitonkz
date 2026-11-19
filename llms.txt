@@ -56,6 +56,8 @@
 - [Машина плохо заводится на холодную: причины и что проверить](https://viton.kz/ru/blog/plokho-zavoditsya-na-holodnuyu/)
 - [Запах бензина в салоне или под капотом: причины и чем опасно](https://viton.kz/ru/blog/zapah-benzina-v-salone/)
 - [Чистка форсунок Li Auto: бензиновый мотор-генератор 1.5T](https://viton.kz/ru/blog/chistka-forsunok-li-auto/)
+- [Вырос расход топлива: причины и что проверить](https://viton.kz/ru/blog/vyros-rashod-topliva/)
+- [Машина дёргается при разгоне: причины и диагностика](https://viton.kz/ru/blog/dergaetsya-pri-razgone/)
 - [Кейс: Lexus NX 200t, троит на холодную и P0171, чистка форсунок](https://viton.kz/ru/blog/keys-lexus-nx-200t-chistka-forsunok/)
 - [Кейс: Toyota Camry 70, плавают обороты, чистка форсунок](https://viton.kz/ru/blog/keys-toyota-camry-70-chistka-forsunok/)
 - [Кейс: BMW X5 F15 N55, бедная смесь и коррекция +25%, чистка форсунок](https://viton.kz/ru/blog/keys-bmw-x5-f15-n55-chistka-forsunok/)
